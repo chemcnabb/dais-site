@@ -1,1 +1,1 @@
-web: gunicorn --chdir DaisSite --log-file - dais.wsgi:application
+web: gunicorn dais.wsgi
