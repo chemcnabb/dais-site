@@ -25,7 +25,7 @@ SECRET_KEY = '02r1zb-g$_u7ew5iczwt*89#!+=njh+vz@oiwbvg-=96^o=qdp'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['dais-site.herokuapp.com',]
 
 
 # Application definition
