@@ -1,0 +1,64 @@
+// BOOTSTRAP OVERRIDES
+
+.navbar-inverse {
+    background-color: #fff;
+    border: none;
+}
+.navbar-toggle {
+    margin-left: 0px;
+    margin-top: 18px;
+  }
+.navbar-inverse .navbar-toggle {
+    border: none !important;
+}
+.navbar-fixed-top {
+    min-height: 70px;
+}
+
+.navbar-nav > li > a {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    line-height: 80px;
+}
+.navbar-toggle {
+    margin-left: 28px;
+    margin-top: 18px;
+        position: absolute !important;
+}
+@media (max-width: 767px) {
+
+    .navbar-nav > li > a {
+    line-height: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    }
+
+
+  .navbar-nav {
+    margin: 0 -15px !important;
+}
+}
+
+
+
+
+
+
+.navbar-header {
+  float: none;
+}
+.navbar-toggle {
+  display: block;
+}
+.navbar-collapse.collapse {
+  display: none!important;
+}
+.navbar-nav {
+  float: none!important;
+}
+.navbar-nav>li {
+  float: none;
+}
+.navbar-collapse.collapse.in{
+  display:block !important;
+}

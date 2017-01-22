@@ -1,0 +1,77 @@
+{% load render_bundle from webpack_loader %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>DAIS</title>
+
+</head>
+
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-header">
+        <div class="navbar-block">
+            <a class="navbar-brand" href="#"></a>
+            <button type="button" class="pull-left navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+    </div>
+    <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right nav-stacked">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+    </div>
+</nav>
+<div class="container-fluid">
+    <div class="row ">
+        <ul class="subnav">
+            <li><a href="#">watch</a></li>
+            <li><a href="#about">look</a></li>
+            <li><a href="#contact">listen</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <!-- Example row of columns -->
+    <div class="row ">
+        <div class="col-md-12 viewport" style="background-image: url(/static/test_resources/image_test_1.jpg);">
+            <div class="content">
+                <div class="copy-headings">
+                    <div class="title">r.e.d</div>
+                    <div class="subtitle">a tribe called red featuring yaslin & narcy</div>
+                    <hr class="title-line"/>
+                    <a href="#" class="watch-link">watch</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <hr>
+
+    <footer>
+        <p>&copy; 2016 Company, Inc.</p>
+    </footer>
+</div> <!-- /container -->
+
+
+{% render_bundle 'main' %}
+</body>
+</html>
+
+

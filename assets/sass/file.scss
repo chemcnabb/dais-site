@@ -1,0 +1,56 @@
+
+@import 'bootstrap';
+@import 'bootstrap-overrides';
+
+html{
+  height:100%;
+}
+body {
+	padding-top:70px;
+    height:100%;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+
+
+@import 'navigation';
+.content{
+    position: relative;
+    min-height: 100%;
+
+.copy-headings{
+    position: absolute;
+    bottom: 15px;
+    min-width: 100%;
+  .title{
+    font-size:24px;
+    font-weight:bold;
+    text-transform: uppercase;
+  }
+  .subtitle{
+    font-size: 12px;
+    text-transform: capitalize;
+  }
+  .title-line{
+    border-color: #000;
+  }
+}
+  }
+.viewport{
+  height: 90vh;
+  width: 100vw;
+  max-width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+          position: relative;
+    top: 30px;
+
+}
+@media (max-width: 992px) {
+  .viewport{
+    .content{
+      padding-top:0.1px;
+    }
+}
+}
