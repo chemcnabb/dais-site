@@ -16,12 +16,13 @@ body {
 @import 'navigation';
 .content{
     position: relative;
+  padding:14px;
     min-height: 100%;
 
 .copy-headings{
     position: absolute;
-    bottom: 15px;
-    min-width: 100%;
+        bottom:5%;
+    min-width: 98%;
   .title{
     font-size:24px;
     font-weight:bold;
@@ -29,10 +30,19 @@ body {
   }
   .subtitle{
     font-size: 12px;
+    margin-top: 7px;
     text-transform: capitalize;
   }
   .title-line{
     border-color: #000;
+        margin-bottom: 9px;
+    margin-top: 13px;
+  }
+  .watch-link{
+    text-transform:uppercase;
+    color:#000;
+    font-size:10px;
+    font-weight:bold;
   }
 }
   }

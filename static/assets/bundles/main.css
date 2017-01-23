@@ -5906,20 +5906,29 @@ body {
 
 .content {
   position: relative;
+  padding: 14px;
   min-height: 100%; }
   .content .copy-headings {
     position: absolute;
-    bottom: 15px;
-    min-width: 100%; }
+    bottom: 5%;
+    min-width: 98%; }
     .content .copy-headings .title {
       font-size: 24px;
       font-weight: bold;
       text-transform: uppercase; }
     .content .copy-headings .subtitle {
       font-size: 12px;
+      margin-top: 7px;
       text-transform: capitalize; }
     .content .copy-headings .title-line {
-      border-color: #000; }
+      border-color: #000;
+      margin-bottom: 9px;
+      margin-top: 13px; }
+    .content .copy-headings .watch-link {
+      text-transform: uppercase;
+      color: #000;
+      font-size: 10px;
+      font-weight: bold; }
 
 .viewport {
   height: 90vh;
