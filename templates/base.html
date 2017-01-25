@@ -11,15 +11,16 @@
     <link rel="icon" href="../../favicon.ico">
 
     <title>DAIS</title>
-
+    {% render_bundle 'main' 'css' %}
 </head>
 
-<body>
+<body class="{% block page-class %}{% endblock %}">
 
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-header">
+        <a class="navbar-brand" href="#"></a>
         <div class="navbar-block">
-            <a class="navbar-brand" href="#"></a>
+
             <button type="button" class="pull-left navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -28,61 +29,27 @@
         </div>
     </div>
     <div class="navbar-collapse collapse">
-        <ul class="nav navbar-nav navbar-right nav-stacked">
-            <li class="active"><a href="#">Home</a></li>
+        <ul class="nav navbar-nav subnav">
+            <li><a href="#">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
 
     </div>
 </nav>
-<div class="container-fluid">
-    <div class="row ">
-        <ul class="subnav">
-            <li><a href="#">watch</a></li>
-            <li><a href="#about">look</a></li>
-            <li><a href="#contact">listen</a></li>
-        </ul>
-    </div>
-</div>
+{#<div class="container-fluid">#}
+{#    <div class="row ">#}
+{#        <ul class="subnav">#}
+{#            <li><a href="#">watch</a></li>#}
+{#            <li><a href="#about">look</a></li>#}
+{#            <li><a href="#contact">listen</a></li>#}
+{#        </ul>#}
+{#    </div>#}
+{#</div>#}
 
 <div class="container-fluid">
     <!-- Example row of columns -->
-    <div class="row ">
-        <div class="col-md-12 viewport" style="background-image: url(/static/test_resources/image_test_1.jpg);">
-            <div class="content">
-                <div class="copy-headings">
-                    <div class="title">r.e.d</div>
-                    <div class="subtitle">a tribe called red featuring yaslin & narcy</div>
-                    <hr class="title-line"/>
-                    <a href="#" class="watch-link">watch</a>
-                </div>
-            </div>
-        </div>
-
-    </div>
-    <div class="row ">
-        <div class="col-sm-6 viewport-half" style="background-image: url(/static/test_resources/image_test_2.jpg);">
-            <div class="content">
-                <div class="copy-headings">
-                    <div class="title">r.e.d</div>
-                    <div class="subtitle">a tribe called red featuring yaslin & narcy</div>
-                    <hr class="title-line"/>
-                    <a href="#" class="watch-link">watch</a>
-                </div>
-            </div>
-        </div>
-       <div class="col-sm-6 viewport-half" style="background-image: url(/static/test_resources/image_test_3.jpg);">
-            <div class="content">
-                <div class="copy-headings">
-                    <div class="title">r.e.d</div>
-                    <div class="subtitle">a tribe called red featuring yaslin & narcy</div>
-                    <hr class="title-line"/>
-                    <a href="#" class="watch-link">watch</a>
-                </div>
-            </div>
-        </div>
-    </div>
+    {% block content %}{% endblock content %}
     <hr>
 
     <footer>
@@ -91,7 +58,7 @@
 </div> <!-- /container -->
 
 
-{% render_bundle 'main' %}
+{% render_bundle 'main' 'js' %}
 </body>
 </html>
 

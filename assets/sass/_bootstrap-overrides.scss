@@ -18,7 +18,7 @@
 .navbar-nav > li > a {
     padding-top: 0px;
     padding-bottom: 0px;
-    line-height: 80px;
+    line-height: 30px;
 }
 .navbar-toggle {
     margin-left: 28px;
@@ -57,7 +57,7 @@
   float: none!important;
 }
 .navbar-nav>li {
-  float: none;
+  float: left;
 }
 .navbar-collapse.collapse.in{
   display:block !important;
