@@ -42,7 +42,7 @@ left: 90%;
       position: relative;
     margin: 0 auto;
     width: 200px;
-    float: none;
+    float: none !important;
     /* right: 0%; */
     /* float: right; */
     text-align: center;
