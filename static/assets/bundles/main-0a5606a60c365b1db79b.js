@@ -55,6 +55,7 @@ var DaisController =
 
 	/* WEBPACK VAR INJECTION */(function(global) {global.jQuery = __webpack_require__(2);
 	__webpack_require__(3);
+	
 	let Utilities = __webpack_require__(16);
 	let HomeController = __webpack_require__(17);
 	let WatchController = __webpack_require__(18);
@@ -12737,7 +12738,9 @@ var DaisController =
 	 */
 	var $ = global.jQuery;
 	var Utilities = {
-	    init: function () {},
+	    init: function () {
+	        $(document).ready(function () {});
+	    },
 	
 	    videoClick: function (videoId) {
 	        $('.vimeo-img').click(function (event) {
@@ -12794,4 +12797,4 @@ var DaisController =
 
 /***/ }
 /******/ ]);
-//# sourceMappingURL=main-ec421d401060d984e131.js.map
+//# sourceMappingURL=main-0a5606a60c365b1db79b.js.map

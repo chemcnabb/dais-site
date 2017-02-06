@@ -5879,7 +5879,7 @@ button.close {
   text-align: center; }
   .watch-logo-container .watch-date-line {
     border-color: #000; }
-  .watch-logo-container img {
+  .watch-logo-container img, .watch-logo-container svg {
     width: 50px; }
 
 .watch-copy {
@@ -5902,6 +5902,23 @@ button.close {
     position: absolute;
     bottom: -1px;
     right: 0; }
+
+.watch-next-thumb {
+  width: 200px; }
+
+.watch-next-thumb {
+  margin-left: 40px;
+  margin-bottom: 40px; }
+
+.watch-more {
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 140px;
+  width: 200px; }
 
 html {
   height: 100%; }
@@ -6083,4 +6100,4 @@ body {
   .viewport .content {
     padding-top: 0.1px; } }
 
-/*# sourceMappingURL=main-ec421d401060d984e131.css.map*/
+/*# sourceMappingURL=main-0a5606a60c365b1db79b.css.map*/
