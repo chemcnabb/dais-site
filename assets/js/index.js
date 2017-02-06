@@ -1,3 +1,12 @@
 global.jQuery = require('jquery');
 require('bootstrap');
-var HomeController = require('./HomeController');
+let Utilities = require('./Utilities');
+let HomeController = require('./HomeController');
+let WatchController = require('./WatchController');
+
+window.WatchController = WatchController;
+window.HomeController = HomeController;
+window.Utilities = Utilities;
+
+
+

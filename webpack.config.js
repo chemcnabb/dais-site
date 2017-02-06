@@ -12,6 +12,9 @@ module.exports = {
   output: {
       path: path.resolve('./static/assets/bundles/'),
       filename: "[name]-[hash].js",
+      libraryTarget: "var",
+      library: "DaisController",
+
   },
 
   plugins: [

@@ -39,7 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'webpack_loader',
     'home',
-    'watch'
+    'watch',
+    'look',
+    'listen',
 ]
 
 MIDDLEWARE_CLASSES = [

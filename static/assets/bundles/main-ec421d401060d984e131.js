@@ -1,3 +1,4 @@
+var DaisController =
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -45,7 +46,7 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	__webpack_require__(1);
-	module.exports = __webpack_require__(17);
+	module.exports = __webpack_require__(19);
 
 
 /***/ },
@@ -54,7 +55,13 @@
 
 	/* WEBPACK VAR INJECTION */(function(global) {global.jQuery = __webpack_require__(2);
 	__webpack_require__(3);
-	var HomeController = __webpack_require__(16);
+	let Utilities = __webpack_require__(16);
+	let HomeController = __webpack_require__(17);
+	let WatchController = __webpack_require__(18);
+	
+	window.WatchController = WatchController;
+	window.HomeController = HomeController;
+	window.Utilities = Utilities;
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
@@ -12725,6 +12732,33 @@
 /* 16 */
 /***/ function(module, exports) {
 
+	/* WEBPACK VAR INJECTION */(function(global) {/**
+	 * Created by STO-SD003 on 2017-01-23.
+	 */
+	var $ = global.jQuery;
+	var Utilities = {
+	    init: function () {},
+	
+	    videoClick: function (videoId) {
+	        $('.vimeo-img').click(function (event) {
+	
+	            var $this = $(this),
+	                $parent = $this.parent();
+	            console.log($parent);
+	            $this.remove();
+	
+	            $parent.append('<iframe class="col-md-12 viewport" src="https://player.vimeo.com/video/' + videoId + '?color=ffffff&title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>');
+	        });
+	    }
+	};
+	
+	module.exports = Utilities;
+	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
+
+/***/ },
+/* 17 */
+/***/ function(module, exports) {
+
 	/**
 	 * Created by STO-SD003 on 2017-01-23.
 	 */
@@ -12736,11 +12770,28 @@
 	module.exports = HomeController.init();
 
 /***/ },
-/* 17 */
+/* 18 */
+/***/ function(module, exports) {
+
+	/**
+	 * Created by STO-SD003 on 2017-01-23.
+	 */
+	
+	var WatchController = {
+	    init: function () {},
+	    initVideo: function (videoId) {
+	        Utilities.videoClick(videoId);
+	    }
+	};
+	
+	module.exports = WatchController;
+
+/***/ },
+/* 19 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
 /***/ }
 /******/ ]);
-//# sourceMappingURL=main-a5ef84b61609c1dd4a87.js.map
+//# sourceMappingURL=main-ec421d401060d984e131.js.map

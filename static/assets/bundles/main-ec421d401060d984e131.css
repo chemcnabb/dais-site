@@ -5846,6 +5846,13 @@ button.close {
   .navbar-nav {
     margin: 0 -15px !important; } }
 
+.row-full-override {
+  margin-left: -30px;
+  overflow: hidden; }
+  .row-full-override iframe {
+    width: 102vw !important;
+    max-width: none !important; }
+
 .navbar-header {
   float: none; }
 
@@ -5864,6 +5871,38 @@ button.close {
 .navbar-collapse.collapse.in {
   display: block !important; }
 
+.watch-logo-container {
+  border: 1px solid black;
+  padding: 15px;
+  width: 135px;
+  height: 135px;
+  text-align: center; }
+  .watch-logo-container .watch-date-line {
+    border-color: #000; }
+  .watch-logo-container img {
+    width: 50px; }
+
+.watch-copy {
+  font-size: 12px;
+  margin: 0; }
+  .watch-copy .watch-copy-body {
+    border-right: 1px solid black;
+    min-height: 250px; }
+
+.watch-title {
+  margin: 0 15px 45px 0;
+  border-bottom: 1px solid black;
+  position: relative; }
+  .watch-title h1 {
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase; }
+  .watch-title .watch-title-logo {
+    padding-right: 0 !important;
+    position: absolute;
+    bottom: -1px;
+    right: 0; }
+
 html {
   height: 100%; }
 
@@ -5871,6 +5910,16 @@ body {
   padding-top: 70px;
   height: 100%;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+.dais-logo-wrapper {
+  position: absolute;
+  text-align: center;
+  /* margin: auto; */
+  width: 100%; }
+
+.dais-logo {
+  width: 100px;
+  height: 72px; }
 
 .navbar-block {
   width: 100px;
@@ -5948,16 +5997,18 @@ body {
       margin-top: 7px;
       text-transform: capitalize; }
     .content .copy-headings .title-line {
-      transition: all 0.5s ease-in-out;
-      border-color: #000;
-      margin-bottom: 9px;
-      margin-top: 13px; }
+      transition: all 0.5s ease-in-out; }
     .content .copy-headings .watch-link {
       transition: all 0.5s ease-in-out;
       text-transform: uppercase;
       color: #000;
       font-size: 10px;
       font-weight: bold; }
+
+.title-line {
+  border-color: #000;
+  margin-bottom: 9px;
+  margin-top: 13px; }
 
 .copy-drawer {
   position: relative;
@@ -5972,6 +6023,17 @@ body {
   bottom: -1%;
   z-index: 10;
   opacity: 1; }
+
+.play-btn {
+  background-image: url("/static/imgs/icons/video-play-icon.png");
+  width: 114px;
+  height: 114px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0; }
 
 .viewport:hover > .copy-drawer, .viewport:focus > .copy-drawer, .viewport-half:hover > .copy-drawer, .viewport-half:focus > .copy-drawer {
   bottom: 20%;
@@ -6021,4 +6083,4 @@ body {
   .viewport .content {
     padding-top: 0.1px; } }
 
-/*# sourceMappingURL=main-a5ef84b61609c1dd4a87.css.map*/
+/*# sourceMappingURL=main-ec421d401060d984e131.css.map*/

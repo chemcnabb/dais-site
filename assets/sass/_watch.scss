@@ -1,0 +1,42 @@
+.watch-logo-container{
+      border: 1px solid black;
+    padding: 15px;
+    width: 135px;
+    height: 135px;
+  text-align: center;
+  .watch-date-line{
+    border-color: #000;
+  }
+  img{
+        width: 50px;
+  }
+}
+
+.watch-copy{
+  font-size:12px;
+margin:0;
+  .watch-copy-body{
+    border-right: 1px solid black;
+    min-height: 250px;
+  }
+}
+.watch-title{
+          margin: 0 15px 45px 0;
+    border-bottom: 1px solid black;
+    position: relative;
+  h1{
+    font-size:24px;
+    font-weight: bold;
+    text-transform:uppercase;
+
+  }
+  p{
+
+  }
+  .watch-title-logo{
+    padding-right:0 !important;
+        position: absolute;
+    bottom: -1px;
+    right: 0;
+  }
+}

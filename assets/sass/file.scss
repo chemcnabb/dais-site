@@ -1,5 +1,6 @@
 @import 'bootstrap';
 @import 'bootstrap-overrides';
+@import 'watch';
 
 html {
   height: 100%;
@@ -9,6 +10,16 @@ body {
   padding-top: 70px;
   height: 100%;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.dais-logo-wrapper{
+  position: absolute;
+    text-align: center;
+    /* margin: auto; */
+    width: 100%;
+}
+.dais-logo{
+  width:100px;
+  height:72px;
 }
 
 @import 'navigation';
@@ -50,9 +61,7 @@ body {
     }
     .title-line {
       transition: all 0.5s ease-in-out;
-      border-color: #000;
-      margin-bottom: 9px;
-      margin-top: 13px;
+
     }
     .watch-link {
       transition: all 0.5s ease-in-out;
@@ -63,7 +72,11 @@ body {
     }
   }
 }
-
+.title-line {
+      border-color: #000;
+      margin-bottom: 9px;
+      margin-top: 13px;
+    }
 .copy-drawer {
   position: relative;
   width: 100%;
@@ -79,6 +92,15 @@ body {
   opacity: 1;
 }
 
+
+.play-btn{
+  background-image: url("/static/imgs/icons/video-play-icon.png");
+  width:114px;
+  height:114px;
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+}
 .viewport:hover > .copy-drawer, .viewport:focus > .copy-drawer, .viewport-half:hover > .copy-drawer, .viewport-half:focus > .copy-drawer {
   bottom: 20%;
   opacity: .4;

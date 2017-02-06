@@ -1,29 +1,55 @@
 {% extends "base.html" %}
 {% block page-class %}watch{% endblock %}
 {% block content %}
-    <div class="row ">
-        <div class="col-md-12 viewport" style="background-image: url(/static/test_resources/image_test_1.jpg);">
-            <div class="content">
+    <div class="row  row-full-override">
+        <div class="col-md-12 viewport vimeo-img" style="background-image: url(/static/test_resources/image_test_1.jpg);">
+
+            <div class="play-btn"></div>
+        </div>
+
+    </div>
 
 
+     <div class="row watch-title">
+        <div class="col-md-10 watch-title-content" style="">
+
+                <h1>r.e.d</h1>
+                    <p class="subtitle">A Tribe Called Red featuring Yasiin Bey & Narcy</p>
+                    <p class="subtitle">Directed by Sol G and the Hallucination</p>
+                    <p class="subtitle">Shot in South Africa</p>
+
+
+
+        </div>
+        <div class="col-md-2 pull-right watch-title-logo">
+            <div class="watch-logo-container pull-right">
+                <span class="watch-date">01.09.2016</span>
+                <hr class="watch-date-line"/>
+                <img src="/static/imgs/icons/watch-icon.svg" />
             </div>
-
         </div>
 
     </div>
 
+    <div class="row watch-copy">
+        <div class="col-md-8 watch-copy-body" style="">
+<p>Lorem ipsum dolor sit amet, vel mundi fabulas ea, nec ea putant fuisset. Tale omnis elitr ad pri, in amet meis vel, enim harum dicunt
+et mei.In modo blandit ius, hinc timeam per ea. Ea maiorum invenire dignissim sea. Liber erant probatus at ius, id quo melius virtute,
+    ex movet nominavi euripidis vim.</p>
 
-     <div class="row ">
-        <div class="col-md-12" style="">
-
+<p>Pri at oratio ceteros torquatos. Cu pri summo putent. Novum nihil mel ei, pri odio dissentias et, pro euismod vivendo no. Ipsum
+dicant rationibus ex eos, cum et decore omittam tractatos, at mei phaedrum maluisset contentiones. Omnes consequuntur at qui,
+detracto consectetuer usu cu, oratio pertinacia scribentur ut eam.</p>
         </div>
-
-    </div>
-    <hr>
-    <div class="row ">
         <div class="col-md-12" style="">
 
         </div>
 
     </div>
 {% endblock content %}
+
+{% block extra_js %}
+    <script>
+        WatchController.initVideo(201926108);
+    </script>
+{% endblock %}

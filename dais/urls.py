@@ -19,10 +19,14 @@ from django.conf.urls import url
 from django.contrib import admin
 from home.views import HomeView
 from watch.views import WatchView
+from look.views import LookView
+from listen.views import ListenView
 from django.conf.urls.static import static
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', HomeView.as_view()),
-    url(r'^watch/$', WatchView.as_view()),
+    url(r"^watch/(?P<watch_slug>\w+)/$", WatchView.as_view(), name="watch"),
+    url(r'^look/(?P<look_slug>\w+)/$', LookView.as_view(), name="look"),
+    url(r'^listen/(?P<listen_slug>\w+)/$', ListenView.as_view(), name="listen"),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
