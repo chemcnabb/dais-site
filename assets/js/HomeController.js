@@ -9,5 +9,4 @@ var HomeController = {
     },
 };
 
-
 module.exports = HomeController.init();

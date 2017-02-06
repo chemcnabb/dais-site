@@ -5,7 +5,6 @@
 var WatchController = {
     init: function () {
 
-
     },
     initVideo: function(videoId){
         Utilities.videoClick(videoId);

@@ -4,6 +4,9 @@
 var $ = global.jQuery;
 var Utilities = {
     init: function () {
+        $(document).ready(function() {
+
+            });
 
 
     },
