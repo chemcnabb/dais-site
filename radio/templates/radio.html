@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block page-class %}home{% endblock %}
+{% block page-title %}radio{% endblock %}
+{% block content %}
+    <div class="row ">
+        <div class="col-md-12 viewport background--light" style="background-image: url(/static/test_resources/image_test_1.jpg);">
+            <div class="content">
+                <div class="copy-headings">
+                    <div class="title">r.e.d</div>
+                    <div class="subtitle">a tribe called red featuring yaslin & narcy</div>
+                    <hr class="title-line"/>
+                    <a href="{% url "watch" "demo" %}" class="watch-link">watch</a>
+                </div>
+
+            </div>
+            <div class="copy-drawer"></div>
+        </div>
+
+    </div>
+    <div class="row ">
+        <div class="col-sm-6 viewport-half background--dark" style="background-image: url(/static/test_resources/image_test_2.jpg);">
+            <div class="content">
+                <div class="copy-headings">
+                    <div class="title">r.e.d</div>
+                    <div class="subtitle">a tribe called red featuring yaslin & narcy</div>
+                    <hr class="title-line"/>
+                    <a href="{% url "look" "demo" %}" class="watch-link">look</a>
+                </div>
+            </div>
+            <div class="copy-drawer"></div>
+        </div>
+        <div class="col-sm-6 viewport-half background--dark" style="background-image: url(/static/test_resources/image_test_3.jpg);">
+            <div class="content">
+                <div class="copy-headings">
+                    <div class="title">r.e.d</div>
+                    <div class="subtitle">a tribe called red featuring yaslin & narcy</div>
+                    <hr class="title-line"/>
+                    <a href="{% url "listen" "demo" %}" class="watch-link">listen</a>
+                </div>
+            </div>
+            <div class="copy-drawer"></div>
+        </div>
+    </div>
+{% endblock content %}

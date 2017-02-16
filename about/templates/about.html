@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+{% block page-class %}home{% endblock %}
+{% block page-title %}about{% endblock %}
+{% block content %}
+
+    <div class="row form-wrapper">
+        <div class="col-md-6">
+
+            <p><strong>DAIS</strong> is an artist-first launchpad located in the heart of Toronto.
+We develop, produce and distribute creative projects across all
+                disciplines. <strong>DAIS</strong> is a safe, creative, collaborative space.</p>
+
+            <div class="about-well-footer">
+                <hr>
+                <label>connect with us</label><a>@daiscreates</a>
+                <div class="social-share">
+                    <ul>
+                        <li>
+                            instagram
+                        </li>
+                        <li>
+                            facebook
+                        </li>
+                        <li>
+                            twitter
+                        </li>
+                        <li>
+                            youtube
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+
+
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="form-wrapper">
+                        <form class="form-horizontal" method="post" action="#">
+
+                            <div class="form-group">
+                                <label for="name" class="cols-sm-2 control-label">Name</label>
+                                <div class="cols-sm-10">
+                                    <input type="text" class="form-control" name="name" id="name"
+                                           placeholder="Enter your Name"/>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email" class="cols-sm-2 control-label">Email</label>
+                                <div class="cols-sm-10">
+                                    <input type="text" class="form-control" name="email" id="email"
+                                           placeholder="Enter your Email"/>
+                                </div>
+
+                            </div>
+
+                            <div class="form-group">
+                                <label for="comment" class="cols-sm-2 control-label">Comment</label>
+                                <div class="cols-sm-10">
+
+                                    <textarea cols="10" rows="10" class="form-control" name="comment" id="comment"
+                                              placeholder="Enter your Comment"></textarea>
+
+                                </div>
+                            </div>
+
+
+                            <a type="button" class="btn btn-lg btn-block submit-button">submit</a>
+
+
+                        </form>
+
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+{% endblock content %}

@@ -22,11 +22,23 @@ from watch.views import WatchView
 from look.views import LookView
 from listen.views import ListenView
 from django.conf.urls.static import static
-
+from radio.views import RadioView
+from music.views import MusicView
+from events.views import EventsView
+from about.views import AboutView
+from team.views import TeamView
+from django.views.generic import TemplateView
+from django.conf.urls import include
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', HomeView.as_view()),
     url(r"^watch/(?P<watch_slug>\w+)/$", WatchView.as_view(), name="watch"),
     url(r'^look/(?P<look_slug>\w+)/$', LookView.as_view(), name="look"),
     url(r'^listen/(?P<listen_slug>\w+)/$', ListenView.as_view(), name="listen"),
+    url(r'^radio/$', RadioView.as_view(), name="radio"),
+    url(r'^music/$', MusicView.as_view(), name="music"),
+    url(r'^events/', include('happenings.urls', namespace='calendar'), name="events"),
+# url(r'^calendar/', include('happenings.urls', namespace='calendar')),
+    url(r'^about/$', AboutView.as_view(), name="about"),
+    url(r'^team/$', TeamView.as_view(), name="team"),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

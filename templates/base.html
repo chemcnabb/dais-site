@@ -12,6 +12,8 @@
 
     <title>DAIS</title>
     {% render_bundle 'main' 'css' %}
+    {% block page_css %}{% endblock %}
+    {% block extra_css %}{% endblock %}
 </head>
 
 <body class="{% block page-class %}{% endblock %}">
@@ -33,11 +35,11 @@
     </div>
     <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav subnav">
-            <li><a href="#">Radio</a></li>
-            <li><a href="#about">Music</a></li>
-            <li><a href="#contact">Calendar</a></li>
-            <li><a href="#contact">About</a></li>
-            <li><a href="#contact">Team</a></li>
+            <li><a href="/radio">Radio</a></li>
+            <li><a href="/music">Music</a></li>
+            <li><a href="/events">Calendar</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/team">Team</a></li>
             <li class="middle-section">
                 <div class="page-filters">
                 <div class="btn-group">
@@ -61,23 +63,23 @@
 
     </div>
 </nav>
-{#<div class="container-fluid">#}
-{#    <div class="row ">#}
-{#        <ul class="subnav">#}
-{#            <li><a href="#">watch</a></li>#}
-{#            <li><a href="#about">look</a></li>#}
-{#            <li><a href="#contact">listen</a></li>#}
-{#        </ul>#}
-{#    </div>#}
-{#</div>#}
+<div class="container-fluid header-wrap">
+    <div class="page-header text-center">
+  <h1>{% block page-title %}{% endblock %}</h1>
+    <hr class="hr-bold" />
 
+</div>
+</div>
 <div class="container-fluid">
+
+
+
     <!-- Example row of columns -->
     {% block content %}{% endblock content %}
     <hr>
 
     <footer>
-        <p>&copy; 2016 Company, Inc.</p>
+        <p>footer</p>
     </footer>
 </div> <!-- /container -->
 

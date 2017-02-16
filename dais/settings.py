@@ -38,10 +38,16 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'webpack_loader',
+    'happenings',
     'home',
     'watch',
     'look',
     'listen',
+    'radio',
+    'music',
+    'events',
+    'about',
+    'team',
 ]
 
 MIDDLEWARE_CLASSES = [

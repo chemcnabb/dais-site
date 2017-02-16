@@ -2,6 +2,8 @@
 @import 'bootstrap-overrides';
 @import 'watch';
 @import 'listen';
+@import 'about';
+@import 'team';
 
 html {
   height: 100%;
@@ -24,7 +26,12 @@ body {
 }
 
 @import 'navigation';
+.header-wrap{
+      width: 100%;
 
+    position: relative;
+    min-height: 155px;
+}
 @mixin viewport() {
   height: 93vh;
   background-repeat: no-repeat;

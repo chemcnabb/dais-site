@@ -1,4 +1,12 @@
 Django==1.10.5
+django-annoying==0.10.3
+django-bower==5.2.0
 django-webpack-loader==0.4.1
 gunicorn==19.6.0
+icalendar==3.11.3
+olefile==0.44
+Pillow==4.0.0
+python-dateutil==2.6.0
+pytz==2016.10
+six==1.10.0
 whitenoise==3.2.3
