@@ -24,7 +24,6 @@ from listen.views import ListenView
 from django.conf.urls.static import static
 from radio.views import RadioView
 from music.views import MusicView
-from events.views import EventsView
 from about.views import AboutView
 from team.views import TeamView
 from django.views.generic import TemplateView

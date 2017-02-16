@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+'django.contrib.humanize',
     'webpack_loader',
     'happenings',
     'home',
@@ -45,7 +46,6 @@ INSTALLED_APPS = [
     'listen',
     'radio',
     'music',
-    'events',
     'about',
     'team',
 ]
@@ -129,11 +129,13 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
+MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')
 STATIC_ROOT = os.path.join(BASE_DIR, 'media')
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static/assets'), # We do this so that django's collectstatic copies or our bundles to the STATIC_ROOT or syncs them to whatever storage we use.
     os.path.join(BASE_DIR, 'static/'), # We do this so that django's collectstatic copies or our bundles to the STATIC_ROOT or syncs them to whatever storage we use.
+    os.path.join(BASE_DIR, 'uploads/'), # We do this so that django's collectstatic copies or our bundles to the STATIC_ROOT or syncs them to whatever storage we use.
 )
 
 WEBPACK_LOADER = {
@@ -142,3 +144,5 @@ WEBPACK_LOADER = {
         'STATS_FILE': os.path.join(BASE_DIR, 'webpack-stats.json'),
     }
 }
+
+CALENDAR_SHOW_LIST = True

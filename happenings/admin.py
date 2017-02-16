@@ -13,7 +13,7 @@ class EventAdmin(admin.ModelAdmin):
     fieldsets = (
         (None, {
             'fields': ('start_date', 'end_date', 'all_day', 'repeat',
-                       'end_repeat', 'poster', 'title', 'description',
+                       'end_repeat', 'poster_image', 'poster', 'title', 'description',
                        'created_by',)
         }),
         ('Location', {
@@ -37,8 +37,10 @@ class EventAdmin(admin.ModelAdmin):
         }),
     )
 
-    list_display = ('poster', 'title', 'start_date', 'end_date', 'repeat', 'end_repeat')
+    list_display = ('poster_thumbnail', 'title', 'start_date', 'end_date', 'repeat', 'end_repeat')
+    readonly_fields = ('poster_image',)
     list_filter = ['start_date']
+    list_display_links = ('poster_thumbnail', 'title')
     search_fields = ['title']
     date_hierarchy = 'start_date'
     inlines = [CancellationInline]

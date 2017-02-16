@@ -92,6 +92,24 @@ class Event(models.Model):
         self._check_if_cancelled_cache = {}
         self.title_extra = ''
 
+    def poster_image(self):
+        if self.poster:
+            return u'<img width="450" src="/static/%s" />' % self.poster.url
+        else:
+            return ""
+
+    poster_image.short_description = 'Poster Image'
+    poster_image.allow_tags = True
+
+    def poster_thumbnail(self):
+        if self.poster:
+            return u'<img width="100" src="/static/%s" />' % self.poster.url
+        else:
+            return ""
+
+    poster_thumbnail.short_description = 'Poster Image'
+    poster_thumbnail.allow_tags = True
+
     def get_l_start_date(self):
         """Localized start date."""
         return timezone.localtime(self.start_date)

@@ -5968,6 +5968,27 @@ button.close {
   -o-transition: border 0.2s ease-in-out;
   transition: border 0.2s ease-in-out; }
 
+.event-poster {
+  height: 0;
+  width: 100%;
+  padding-top: 72%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative; }
+
+.event-description {
+  margin-top: 20px; }
+
+.event-title hr {
+  margin-top: 10px;
+  margin-bottom: 10px; }
+
+table.month {
+  width: 100%;
+  max-width: 100% !important;
+  margin: 25px auto auto auto !important;
+  height: 70vh; }
+
 .page-header {
   background-color: #efefef;
   position: absolute;
@@ -6237,4 +6258,4 @@ body {
   .viewport .content {
     padding-top: 0.1px; } }
 
-/*# sourceMappingURL=main-762c84f4e4c459c4a5f2.css.map*/
+/*# sourceMappingURL=main-eda11fb7b15aeb47524b.css.map*/

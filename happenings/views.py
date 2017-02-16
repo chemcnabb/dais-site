@@ -97,7 +97,7 @@ class EventMonthView(GenericEventView):
 
         # add a dict containing the year, month, and month name to the context
         current = dict(
-            year=year, month_num=month, month=MONTHS_ALT[month][:3]
+            year=year, month_num=month, month=MONTHS_ALT[month]
         )
         context['current'] = current
 
