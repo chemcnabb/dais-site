@@ -32,6 +32,12 @@ body {
     position: relative;
     min-height: 155px;
 }
+.no-header{
+  display:none;
+}
+.show-header{
+  display:block;
+}
 @mixin viewport() {
   height: 93vh;
   background-repeat: no-repeat;

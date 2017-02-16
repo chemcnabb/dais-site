@@ -5993,6 +5993,14 @@ button.close {
 .form-wrapper {
   padding: 25px; }
 
+.submit-button {
+  text-transform: uppercase;
+  color: black;
+  text-align: left;
+  margin-left: -30px;
+  font-size: 14px !important;
+  font-weight: bold; }
+
 .team-thumbnail {
   background-size: cover;
   width: 100%;
@@ -6119,6 +6127,12 @@ body {
   position: relative;
   min-height: 155px; }
 
+.no-header {
+  display: none; }
+
+.show-header {
+  display: block; }
+
 .content {
   position: relative;
   padding: 14px;
@@ -6223,4 +6237,4 @@ body {
   .viewport .content {
     padding-top: 0.1px; } }
 
-/*# sourceMappingURL=main-051531ac48517b319cf8.css.map*/
+/*# sourceMappingURL=main-762c84f4e4c459c4a5f2.css.map*/
