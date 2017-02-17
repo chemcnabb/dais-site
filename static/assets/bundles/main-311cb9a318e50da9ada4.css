@@ -6166,11 +6166,13 @@ body {
     .content .copy-headings .title {
       font-size: 24px;
       font-weight: bold;
-      text-transform: uppercase; }
+      text-transform: uppercase;
+      transition: all 0.5s ease-in-out; }
     .content .copy-headings .subtitle {
       font-size: 12px;
       margin-top: 7px;
-      text-transform: capitalize; }
+      text-transform: capitalize;
+      transition: all 0.5s ease-in-out; }
     .content .copy-headings .title-line {
       transition: all 0.5s ease-in-out; }
     .content .copy-headings .watch-link {
@@ -6187,7 +6189,7 @@ body {
 
 .copy-drawer {
   position: relative;
-  width: 100%;
+  width: 110%;
   height: 50%;
   background-color: #000;
   display: block;
@@ -6197,7 +6199,9 @@ body {
   transition: all 0.3s ease-in-out;
   bottom: -1%;
   z-index: 10;
-  opacity: 1; }
+  opacity: 1;
+  margin-left: -15px;
+  margin-right: -15px; }
 
 .play-btn {
   background-image: url("/static/imgs/icons/video-play-icon.png");
@@ -6211,7 +6215,7 @@ body {
   right: 0; }
 
 .viewport:hover > .copy-drawer, .viewport:focus > .copy-drawer, .viewport-half:hover > .copy-drawer, .viewport-half:focus > .copy-drawer {
-  bottom: 20%;
+  bottom: 175px;
   opacity: .4; }
 
 .viewport {
@@ -6226,7 +6230,6 @@ body {
   max-width: 100%; }
 
 .home .viewport {
-  transition: all 0.3s ease-in-out;
   box-shadow: inset 0 0 0 1000px rgba(255, 255, 255, 0.5); }
 
 .viewport:hover, .viewport:focus {
@@ -6247,7 +6250,6 @@ body {
   overflow: hidden; }
 
 .home .viewport-half {
-  transition: all 0.3s ease-in-out;
   box-shadow: inset 0 0 0 1000px rgba(255, 255, 255, 0.5); }
 
 .viewport-half:hover, .viewport-half:focus {
@@ -6258,4 +6260,4 @@ body {
   .viewport .content {
     padding-top: 0.1px; } }
 
-/*# sourceMappingURL=main-eda11fb7b15aeb47524b.css.map*/
+/*# sourceMappingURL=main-311cb9a318e50da9ada4.css.map*/
