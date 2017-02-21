@@ -6,14 +6,14 @@
     {% for post in post_list %}
             {% if post %}
 
-                    {% cycle '<div class="row ">' '<div class="row ">' "" %}
+                    {% cycle '<div class="row ">' '<div class="row ">' '' %}
 
 
 
 
 
                 <a href="{{ post.get_url }}">
-                    <div class="col-sm-6 {% cycle "viewport" "viewport-half" "viewport-half" %} {{ post.category }}"
+                    <div class="{% cycle "col-md-12 viewport" "col-sm-6 viewport-half" "col-sm-6 viewport-half" %} {{ post.category }}"
                          style="background-image: url(/static/{{ post.poster_image.url }});">
                         <div class="content">
                             <div class="copy-headings">
@@ -28,15 +28,22 @@
                 </a>
 
 
-
+{##}
 {% if not post_list|length|divisibleby:"3" and forloop.counter|divisibleby:"3" %}
     </div>
-    {% endif %}
-            {% cycle "</div>" '' "</div>" %}
-
+    {% else %}
+            {% cycle "</div>" "" "</div>" %}
+{% endif %}
             {% endif %}
 
     {% endfor %}
+
+
+
+
+
+
+
 
 
 {% endblock content %}
