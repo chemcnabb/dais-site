@@ -6,7 +6,7 @@
     {% for post in post_list %}
             {% if post %}
 
-                    {% cycle "" '<div class="row ">' "" %}
+                    {% cycle '<div class="row ">' '<div class="row ">' "" %}
 
 
 
@@ -29,8 +29,10 @@
 
 
 
-
-            {% cycle "" '' "</div>" %}
+{% if not post_list|length|divisibleby:"3" and forloop.counter|divisibleby:"2" %}
+    </div>
+    {% endif %}
+            {% cycle "</div>" '' "</div>" %}
 
             {% endif %}
 
