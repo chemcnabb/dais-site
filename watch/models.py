@@ -1,7 +1,7 @@
 from __future__ import unicode_literals
 from tinymce.models import HTMLField
 from django.db import models
-from dais.utilities import unique_slugify as slugify
+from django.template.defaultfilters import slugify
 
 # Create your models here.
 class WatchPost(models.Model):
@@ -27,5 +27,5 @@ class WatchPost(models.Model):
 
 
     def save(self, *args, **kwargs):
-        self.slug = slugify(WatchPost, self.title)
+        self.slug = slugify(self.title)
         super(WatchPost, self).save(*args, **kwargs)

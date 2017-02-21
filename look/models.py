@@ -3,7 +3,7 @@ from __future__ import unicode_literals
 from django.db import models
 from tinymce.models import HTMLField
 # Create your models here.
-from dais.utilities import unique_slugify as slugify
+from django.template.defaultfilters import slugify
 
 # Create your models here.
 class LookPost(models.Model):
@@ -27,5 +27,5 @@ class LookPost(models.Model):
         return "/look/%s" % self.slug
 
     def save(self, *args, **kwargs):
-        self.slug = slugify(self, self.title)
+        self.slug = slugify(self.title)
         super(LookPost, self).save(*args, **kwargs)

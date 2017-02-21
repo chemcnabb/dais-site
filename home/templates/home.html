@@ -4,11 +4,14 @@
 {% block content %}
 
     {% for post in post_list %}
-        {% with post.0 as post  %}
+        {% with post.0 as post %}
+            {% if post %}
+                {% if forloop.counter|divisibleby:3 %}
+                    <div class="row ">
+                {% endif %}
+            {% if forloop.counter|divisibleby:3 %}
 
-        {% if forloop.counter|divisibleby:3 %}
 
-            <div class="row ">
 
                 <a href="{{ post.get_url }}">
                     <div class="col-sm-6 viewport-half look"
@@ -24,42 +27,35 @@
                         <div class="copy-drawer"></div>
                     </div>
                 </a>
-                <a href="{{ post.get_url }}">
-                    <div class="col-sm-6 viewport-half listen"
-                         style="background-image: url(/static/{{ post.poster_image }});">
-                        <div class="content">
-                            <div class="copy-headings">
-                                <div class="title">{{ post.title }}</div>
-                                <div class="subtitle">{{ post.subtitle }}</div>
-                                <hr class="title-line"/>
-                                <span class="watch-link">{{ post.category }}</span>
+
+
+
+            {% endif %}
+            {% if forloop.counter|divisibleby:3 %}
+                </div>
+            {% endif %}
+                {% if not forloop.counter|divisibleby:3 %}
+
+                    <div class="row ">
+                        <a href="{{ post.get_url }}">
+                            <div class="col-md-12 viewport watch"
+                                 style="background-image: url(/static/{{ post.poster_image.url }});">
+                                <div class="content">
+                                    <div class="copy-headings">
+                                        <div class="title">{{ post.title }}</div>
+                                        <div class="subtitle">{{ post.subtitle }}</div>
+                                        <hr class="title-line"/>
+                                        <span class="watch-link">{{ post.category }}</span>
+                                    </div>
+
+                                </div>
+                                <div class="copy-drawer"></div>
                             </div>
-                        </div>
-                        <div class="copy-drawer"></div>
+                        </a>
+
                     </div>
-                </a>
-            </div>
-        {% else %}
-
-            <div class="row ">
-                <a href="{{ post.get_url }}">
-                    <div class="col-md-12 viewport watch"
-                         style="background-image: url(/static/{{ post.poster_image.url }});">
-                        <div class="content">
-                            <div class="copy-headings">
-                                <div class="title">{{ post.title }}</div>
-                                <div class="subtitle">{{ post.subtitle }}</div>
-                                <hr class="title-line"/>
-                                <span class="watch-link">{{ post.category }}</span>
-                            </div>
-
-                        </div>
-                        <div class="copy-drawer"></div>
-                    </div>
-                </a>
-
-            </div>
-        {% endif %}
+                {% endif %}
+            {% endif %}
         {% endwith %}
     {% endfor %}
 
