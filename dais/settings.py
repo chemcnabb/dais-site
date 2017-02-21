@@ -88,8 +88,9 @@ WSGI_APPLICATION = 'dais.wsgi.application'
 import dj_database_url
 DATABASES = {}
 
-print dj_database_url.config()
-DATABASES['default'] = dj_database_url.config(default='postgres://STO-SD003:Wh0ar3y0u@localhost/dais')
+
+DATABASES['default'] = dj_database_url.config()
+DATABASES['default']['ENGINE'] = 'django.db.backends.postgresql_psycopg2'
 
 # Password validation
 # https://docs.djangoproject.com/en/1.9/ref/settings/#auth-password-validators
