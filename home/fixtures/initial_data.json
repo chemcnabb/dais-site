@@ -1,0 +1,1148 @@
+[
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 1,
+    "fields": {
+      "app_label": "admin",
+      "model": "logentry"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 2,
+    "fields": {
+      "app_label": "auth",
+      "model": "permission"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 3,
+    "fields": {
+      "app_label": "auth",
+      "model": "user"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 4,
+    "fields": {
+      "app_label": "auth",
+      "model": "group"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 5,
+    "fields": {
+      "app_label": "contenttypes",
+      "model": "contenttype"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 6,
+    "fields": {
+      "app_label": "sessions",
+      "model": "session"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 7,
+    "fields": {
+      "app_label": "schedule",
+      "model": "eventrelation"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 8,
+    "fields": {
+      "app_label": "schedule",
+      "model": "occurrence"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 9,
+    "fields": {
+      "app_label": "schedule",
+      "model": "event"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 10,
+    "fields": {
+      "app_label": "schedule",
+      "model": "rule"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 11,
+    "fields": {
+      "app_label": "schedule",
+      "model": "calendar"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 12,
+    "fields": {
+      "app_label": "schedule",
+      "model": "calendarrelation"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 13,
+    "fields": {
+      "app_label": "happenings",
+      "model": "event"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 14,
+    "fields": {
+      "app_label": "happenings",
+      "model": "tag"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 15,
+    "fields": {
+      "app_label": "happenings",
+      "model": "location"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 16,
+    "fields": {
+      "app_label": "happenings",
+      "model": "category"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 17,
+    "fields": {
+      "app_label": "happenings",
+      "model": "cancellation"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 18,
+    "fields": {
+      "app_label": "watch",
+      "model": "watchpost"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 19,
+    "fields": {
+      "app_label": "look",
+      "model": "lookpost"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 20,
+    "fields": {
+      "app_label": "listen",
+      "model": "listenpost"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "mb3l3i1peuq0l3h6uqpdxmswhv2cdioc",
+    "fields": {
+      "session_data": "NzkxZDc3YzQwZmNlMTIwMDMyYmFhNDkyM2RlZmFlZDNiNzk1YmU3Zjp7Il9hdXRoX3VzZXJfaGFzaCI6Ijc2OTAzYTMzYmQyNjZlY2FmYzZiMjUyZDc3YmVmMDU1NjU0Mzk0ZWYiLCJfYXV0aF91c2VyX2lkIjoiMSIsIl9hdXRoX3VzZXJfYmFja2VuZCI6ImRqYW5nby5jb250cmliLmF1dGguYmFja2VuZHMuTW9kZWxCYWNrZW5kIn0=",
+      "expire_date": "2017-03-07T02:14:53.300Z"
+    }
+  },
+  {
+    "model": "happenings.category",
+    "pk": 1,
+    "fields": {
+      "title": "balls"
+    }
+  },
+  {
+    "model": "watch.watchpost",
+    "pk": 1,
+    "fields": {
+      "date": "2017-02-21T02:36:01Z",
+      "poster_image": "image_test_1.jpg",
+      "title": "R.E.D.",
+      "subtitle": "A Tribe Called Red featuring Yasiin Bey & Narcy",
+      "credits": "Directed by Sol G and the Hallucination",
+      "detail": "Shot in South Africa",
+      "vimeo_id": "201926108",
+      "description": "<p>Lorem ipsum dolor sit amet, vel mundi fabulas ea, nec ea putant fuisset. Tale omnis elitr ad pri, in amet meis vel, enim harum dicunt et mei.In modo blandit ius, hinc timeam per ea. Ea maiorum invenire dignissim sea. Liber erant probatus at ius, id quo melius virtute, ex movet nominavi euripidis vim.</p>\r\n<p>Pri at oratio ceteros torquatos. Cu pri summo putent. Novum nihil mel ei, pri odio dissentias et, pro euismod vivendo no. Ipsum dicant rationibus ex eos, cum et decore omittam tractatos, at mei phaedrum maluisset contentiones. Omnes consequuntur at qui, detracto consectetuer usu cu, oratio pertinacia scribentur ut eam.</p>",
+      "slug": "red"
+    }
+  },
+  {
+    "model": "listen.listenpost",
+    "pk": 1,
+    "fields": {
+      "date": "2017-02-21T03:22:59Z",
+      "poster_image": "album-cover.jpg",
+      "title": "R.E.D.",
+      "subtitle": "A Tribe Called Red featuring Yasiin Bey & Narcy",
+      "credits": "Directed by Sol G and the Hallucination",
+      "detail": "Shot in South Africa",
+      "soundcloud_embed": "<iframe width=\"100%\" height=\"166\" scrolling=\"no\" frameborder=\"no\" src=\"https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/279560207&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false\"></iframe>",
+      "description": "<p>Lorem ipsum dolor sit amet, vel mundi fabulas ea, nec ea putant fuisset. Tale omnis elitr ad pri, in amet meis vel, enim harum dicunt et mei.In modo blandit ius, hinc timeam per ea. Ea maiorum invenire dignissim sea. Liber erant probatus at ius, id quo melius virtute, ex movet nominavi euripidis vim.</p>\r\n<p>Pri at oratio ceteros torquatos. Cu pri summo putent. Novum nihil mel ei, pri odio dissentias et, pro euismod vivendo no. Ipsum dicant rationibus ex eos, cum et decore omittam tractatos, at mei phaedrum maluisset contentiones. Omnes consequuntur at qui, detracto consectetuer usu cu, oratio pertinacia scribentur ut eam.</p>",
+      "slug": "red"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 1,
+    "fields": {
+      "name": "Can add log entry",
+      "content_type": 1,
+      "codename": "add_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 2,
+    "fields": {
+      "name": "Can change log entry",
+      "content_type": 1,
+      "codename": "change_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 3,
+    "fields": {
+      "name": "Can delete log entry",
+      "content_type": 1,
+      "codename": "delete_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 4,
+    "fields": {
+      "name": "Can add permission",
+      "content_type": 2,
+      "codename": "add_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 5,
+    "fields": {
+      "name": "Can change permission",
+      "content_type": 2,
+      "codename": "change_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 6,
+    "fields": {
+      "name": "Can delete permission",
+      "content_type": 2,
+      "codename": "delete_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 7,
+    "fields": {
+      "name": "Can add user",
+      "content_type": 3,
+      "codename": "add_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 8,
+    "fields": {
+      "name": "Can change user",
+      "content_type": 3,
+      "codename": "change_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 9,
+    "fields": {
+      "name": "Can delete user",
+      "content_type": 3,
+      "codename": "delete_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 10,
+    "fields": {
+      "name": "Can add group",
+      "content_type": 4,
+      "codename": "add_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 11,
+    "fields": {
+      "name": "Can change group",
+      "content_type": 4,
+      "codename": "change_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 12,
+    "fields": {
+      "name": "Can delete group",
+      "content_type": 4,
+      "codename": "delete_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 13,
+    "fields": {
+      "name": "Can add content type",
+      "content_type": 5,
+      "codename": "add_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 14,
+    "fields": {
+      "name": "Can change content type",
+      "content_type": 5,
+      "codename": "change_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 15,
+    "fields": {
+      "name": "Can delete content type",
+      "content_type": 5,
+      "codename": "delete_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 16,
+    "fields": {
+      "name": "Can add session",
+      "content_type": 6,
+      "codename": "add_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 17,
+    "fields": {
+      "name": "Can change session",
+      "content_type": 6,
+      "codename": "change_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 18,
+    "fields": {
+      "name": "Can delete session",
+      "content_type": 6,
+      "codename": "delete_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 19,
+    "fields": {
+      "name": "Can add event relation",
+      "content_type": 7,
+      "codename": "add_eventrelation"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 20,
+    "fields": {
+      "name": "Can change event relation",
+      "content_type": 7,
+      "codename": "change_eventrelation"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 21,
+    "fields": {
+      "name": "Can delete event relation",
+      "content_type": 7,
+      "codename": "delete_eventrelation"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 22,
+    "fields": {
+      "name": "Can add occurrence",
+      "content_type": 8,
+      "codename": "add_occurrence"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 23,
+    "fields": {
+      "name": "Can change occurrence",
+      "content_type": 8,
+      "codename": "change_occurrence"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 24,
+    "fields": {
+      "name": "Can delete occurrence",
+      "content_type": 8,
+      "codename": "delete_occurrence"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 25,
+    "fields": {
+      "name": "Can add event",
+      "content_type": 9,
+      "codename": "add_event"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 26,
+    "fields": {
+      "name": "Can change event",
+      "content_type": 9,
+      "codename": "change_event"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 27,
+    "fields": {
+      "name": "Can delete event",
+      "content_type": 9,
+      "codename": "delete_event"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 28,
+    "fields": {
+      "name": "Can add rule",
+      "content_type": 10,
+      "codename": "add_rule"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 29,
+    "fields": {
+      "name": "Can change rule",
+      "content_type": 10,
+      "codename": "change_rule"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 30,
+    "fields": {
+      "name": "Can delete rule",
+      "content_type": 10,
+      "codename": "delete_rule"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 31,
+    "fields": {
+      "name": "Can add calendar",
+      "content_type": 11,
+      "codename": "add_calendar"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 32,
+    "fields": {
+      "name": "Can change calendar",
+      "content_type": 11,
+      "codename": "change_calendar"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 33,
+    "fields": {
+      "name": "Can delete calendar",
+      "content_type": 11,
+      "codename": "delete_calendar"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 34,
+    "fields": {
+      "name": "Can add calendar relation",
+      "content_type": 12,
+      "codename": "add_calendarrelation"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 35,
+    "fields": {
+      "name": "Can change calendar relation",
+      "content_type": 12,
+      "codename": "change_calendarrelation"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 36,
+    "fields": {
+      "name": "Can delete calendar relation",
+      "content_type": 12,
+      "codename": "delete_calendarrelation"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 37,
+    "fields": {
+      "name": "Can add event",
+      "content_type": 13,
+      "codename": "add_event"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 38,
+    "fields": {
+      "name": "Can change event",
+      "content_type": 13,
+      "codename": "change_event"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 39,
+    "fields": {
+      "name": "Can delete event",
+      "content_type": 13,
+      "codename": "delete_event"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 40,
+    "fields": {
+      "name": "Can add tag",
+      "content_type": 14,
+      "codename": "add_tag"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 41,
+    "fields": {
+      "name": "Can change tag",
+      "content_type": 14,
+      "codename": "change_tag"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 42,
+    "fields": {
+      "name": "Can delete tag",
+      "content_type": 14,
+      "codename": "delete_tag"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 43,
+    "fields": {
+      "name": "Can add location",
+      "content_type": 15,
+      "codename": "add_location"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 44,
+    "fields": {
+      "name": "Can change location",
+      "content_type": 15,
+      "codename": "change_location"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 45,
+    "fields": {
+      "name": "Can delete location",
+      "content_type": 15,
+      "codename": "delete_location"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 46,
+    "fields": {
+      "name": "Can add category",
+      "content_type": 16,
+      "codename": "add_category"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 47,
+    "fields": {
+      "name": "Can change category",
+      "content_type": 16,
+      "codename": "change_category"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 48,
+    "fields": {
+      "name": "Can delete category",
+      "content_type": 16,
+      "codename": "delete_category"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 49,
+    "fields": {
+      "name": "Can add cancellation",
+      "content_type": 17,
+      "codename": "add_cancellation"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 50,
+    "fields": {
+      "name": "Can change cancellation",
+      "content_type": 17,
+      "codename": "change_cancellation"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 51,
+    "fields": {
+      "name": "Can delete cancellation",
+      "content_type": 17,
+      "codename": "delete_cancellation"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 52,
+    "fields": {
+      "name": "Can add watch post",
+      "content_type": 18,
+      "codename": "add_watchpost"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 53,
+    "fields": {
+      "name": "Can change watch post",
+      "content_type": 18,
+      "codename": "change_watchpost"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 54,
+    "fields": {
+      "name": "Can delete watch post",
+      "content_type": 18,
+      "codename": "delete_watchpost"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 55,
+    "fields": {
+      "name": "Can add look post",
+      "content_type": 19,
+      "codename": "add_lookpost"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 56,
+    "fields": {
+      "name": "Can change look post",
+      "content_type": 19,
+      "codename": "change_lookpost"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 57,
+    "fields": {
+      "name": "Can delete look post",
+      "content_type": 19,
+      "codename": "delete_lookpost"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 58,
+    "fields": {
+      "name": "Can add listen post",
+      "content_type": 20,
+      "codename": "add_listenpost"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 59,
+    "fields": {
+      "name": "Can change listen post",
+      "content_type": 20,
+      "codename": "change_listenpost"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 60,
+    "fields": {
+      "name": "Can delete listen post",
+      "content_type": 20,
+      "codename": "delete_listenpost"
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$30000$O4ucKN1ebJRG$w00fKhIoweEiZlqfoyjZ33Oo7uYXaaNiTUv2xONvNyM=",
+      "last_login": "2017-02-16T18:52:02.124Z",
+      "is_superuser": true,
+      "username": "che",
+      "first_name": "",
+      "last_name": "",
+      "email": "chemcnabb@gmail.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2017-02-16T18:51:55.431Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 2,
+    "fields": {
+      "password": "pbkdf2_sha256$30000$RVAoTDZRSp47$CVtDVUCt5eMTIi9JfhXazCKTvBxqDv6O8yziEWGeljk=",
+      "last_login": null,
+      "is_superuser": true,
+      "username": "admin",
+      "first_name": "",
+      "last_name": "",
+      "email": "chemcnabb@gmail.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2017-02-21T02:09:14.010Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "auth.user",
+    "pk": 3,
+    "fields": {
+      "password": "pbkdf2_sha256$30000$Q0QBZmYBAvxQ$+VC1juuvN/dazoEB9yNqjOtNx6RGLIC/C4oqPH/v4kU=",
+      "last_login": null,
+      "is_superuser": true,
+      "username": "brokenadmin",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2017-02-21T02:15:18Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "happenings.event",
+    "pk": 2,
+    "fields": {
+      "start_date": "2017-02-20T21:39:21Z",
+      "end_date": "2017-02-26T21:39:28Z",
+      "all_day": true,
+      "repeat": "NEVER",
+      "end_repeat": null,
+      "title": "Killer Haps",
+      "poster": "lights-party-dancing-music.jpg",
+      "description": "This is a happening",
+      "created_by": 1,
+      "background_color": "eeeeee",
+      "background_color_custom": "",
+      "font_color": "000000",
+      "font_color_custom": "",
+      "location": [],
+      "categories": [],
+      "tags": []
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+      "action_time": "2017-02-16T18:52:45.997Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "1",
+      "object_repr": "Events",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+      "action_time": "2017-02-16T18:53:10.073Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "1",
+      "object_repr": "Rule All Day params ",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+      "action_time": "2017-02-16T18:53:14.971Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "1",
+      "object_repr": "Amazing thing: Feb. 16, 2017 - Feb. 28, 2017",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+      "action_time": "2017-02-16T18:53:55.021Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "1",
+      "object_repr": "Amazing thing: Feb. 15, 2017 - Feb. 28, 2017",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"start\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+      "action_time": "2017-02-16T19:10:56.438Z",
+      "user": 1,
+      "content_type": 16,
+      "object_id": "1",
+      "object_repr": "balls",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+      "action_time": "2017-02-16T19:11:27.416Z",
+      "user": 1,
+      "content_type": 13,
+      "object_id": "1",
+      "object_repr": "Super Awesome Event",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+      "action_time": "2017-02-16T21:40:19.823Z",
+      "user": 1,
+      "content_type": 13,
+      "object_id": "2",
+      "object_repr": "Killer Haps",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 8,
+    "fields": {
+      "action_time": "2017-02-16T21:46:48.276Z",
+      "user": 1,
+      "content_type": 13,
+      "object_id": "2",
+      "object_repr": "Killer Haps",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"poster\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 9,
+    "fields": {
+      "action_time": "2017-02-16T21:50:47.757Z",
+      "user": 1,
+      "content_type": 13,
+      "object_id": "2",
+      "object_repr": "Killer Haps",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"poster\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 10,
+    "fields": {
+      "action_time": "2017-02-16T22:10:04.338Z",
+      "user": 1,
+      "content_type": 13,
+      "object_id": "1",
+      "object_repr": "Super Awesome Event",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 11,
+    "fields": {
+      "action_time": "2017-02-21T02:14:53.298Z",
+      "user": 1,
+      "content_type": 3,
+      "object_id": "1",
+      "object_repr": "che",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"password\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 12,
+    "fields": {
+      "action_time": "2017-02-21T02:15:18.304Z",
+      "user": 1,
+      "content_type": 3,
+      "object_id": "3",
+      "object_repr": "brokenadmin",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 13,
+    "fields": {
+      "action_time": "2017-02-21T02:15:25.169Z",
+      "user": 1,
+      "content_type": 3,
+      "object_id": "3",
+      "object_repr": "brokenadmin",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"is_staff\", \"is_superuser\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 14,
+    "fields": {
+      "action_time": "2017-02-21T02:36:05.732Z",
+      "user": 1,
+      "content_type": 18,
+      "object_id": "1",
+      "object_repr": "WatchPost object",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 15,
+    "fields": {
+      "action_time": "2017-02-21T02:41:43.660Z",
+      "user": 1,
+      "content_type": 18,
+      "object_id": "1",
+      "object_repr": "R.E.D.",
+      "action_flag": 2,
+      "change_message": "[]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 16,
+    "fields": {
+      "action_time": "2017-02-21T02:56:03.635Z",
+      "user": 1,
+      "content_type": 18,
+      "object_id": "1",
+      "object_repr": "R.E.D.",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"vimeo_id\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 17,
+    "fields": {
+      "action_time": "2017-02-21T03:25:34.150Z",
+      "user": 1,
+      "content_type": 20,
+      "object_id": "1",
+      "object_repr": "R.E.D.",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 18,
+    "fields": {
+      "action_time": "2017-02-21T03:25:42.297Z",
+      "user": 1,
+      "content_type": 20,
+      "object_id": "1",
+      "object_repr": "R.E.D.",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"slug\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 19,
+    "fields": {
+      "action_time": "2017-02-21T03:29:03.312Z",
+      "user": 1,
+      "content_type": 20,
+      "object_id": "1",
+      "object_repr": "R.E.D.",
+      "action_flag": 2,
+      "change_message": "[]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 20,
+    "fields": {
+      "action_time": "2017-02-21T03:29:08.792Z",
+      "user": 1,
+      "content_type": 20,
+      "object_id": "1",
+      "object_repr": "R.E.D.",
+      "action_flag": 2,
+      "change_message": "[]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 21,
+    "fields": {
+      "action_time": "2017-02-21T03:30:24.607Z",
+      "user": 1,
+      "content_type": 20,
+      "object_id": "1",
+      "object_repr": "R.E.D.",
+      "action_flag": 2,
+      "change_message": "[]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 22,
+    "fields": {
+      "action_time": "2017-02-21T03:30:27.705Z",
+      "user": 1,
+      "content_type": 20,
+      "object_id": "1",
+      "object_repr": "R.E.D.",
+      "action_flag": 2,
+      "change_message": "[]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 23,
+    "fields": {
+      "action_time": "2017-02-21T03:31:03.282Z",
+      "user": 1,
+      "content_type": 20,
+      "object_id": "1",
+      "object_repr": "R.E.D.",
+      "action_flag": 2,
+      "change_message": "[]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 24,
+    "fields": {
+      "action_time": "2017-02-21T03:50:50.911Z",
+      "user": 1,
+      "content_type": 20,
+      "object_id": "1",
+      "object_repr": "R.E.D.",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"description\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 25,
+    "fields": {
+      "action_time": "2017-02-21T03:51:46.527Z",
+      "user": 1,
+      "content_type": 20,
+      "object_id": "1",
+      "object_repr": "R.E.D.",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"description\"]}}]"
+    }
+  }
+]
