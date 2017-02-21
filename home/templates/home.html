@@ -4,7 +4,6 @@
 {% block content %}
 
     {% for post in post_list %}
-        {% with post.0 as post %}
             {% if post %}
                 {% if forloop.counter|divisibleby:3 %}
                     <div class="row ">
@@ -56,7 +55,7 @@
                     </div>
                 {% endif %}
             {% endif %}
-        {% endwith %}
+
     {% endfor %}
 
 
