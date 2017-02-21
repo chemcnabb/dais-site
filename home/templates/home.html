@@ -5,15 +5,15 @@
 
     {% for post in post_list %}
             {% if post %}
-                {% if forloop.counter|divisibleby:3 %}
-                    <div class="row ">
-                {% endif %}
-            {% if forloop.counter|divisibleby:3 %}
+
+                    {% cycle "" '<div class="row ">' "" %}
+
+
 
 
 
                 <a href="{{ post.get_url }}">
-                    <div class="col-sm-6 viewport-half look"
+                    <div class="col-sm-6 {% cycle "viewport" "viewport-half" "viewport-half" %} {{ post.category }}"
                          style="background-image: url(/static/{{ post.poster_image.url }});">
                         <div class="content">
                             <div class="copy-headings">
@@ -29,31 +29,9 @@
 
 
 
-            {% endif %}
-            {% if forloop.counter|divisibleby:3 %}
-                </div>
-            {% endif %}
-                {% if not forloop.counter|divisibleby:3 %}
 
-                    <div class="row ">
-                        <a href="{{ post.get_url }}">
-                            <div class="col-md-12 viewport watch"
-                                 style="background-image: url(/static/{{ post.poster_image.url }});">
-                                <div class="content">
-                                    <div class="copy-headings">
-                                        <div class="title">{{ post.title }}</div>
-                                        <div class="subtitle">{{ post.subtitle }}</div>
-                                        <hr class="title-line"/>
-                                        <span class="watch-link">{{ post.category }}</span>
-                                    </div>
+            {% cycle "" '' "</div>" %}
 
-                                </div>
-                                <div class="copy-drawer"></div>
-                            </div>
-                        </a>
-
-                    </div>
-                {% endif %}
             {% endif %}
 
     {% endfor %}
