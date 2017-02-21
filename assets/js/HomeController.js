@@ -18,9 +18,9 @@ const HomeController = {
 
         });
         jQuery(".viewport, .viewport-half").hover(function() {
-      jQuery(".title, .subtitle").animate({ color: "#fff" }, 1000);
+      jQuery(this).animate({ boxShadow: "inset 0 0 0 1000px rgba(255, 255, 255, 0)" }, 1000);
     },function() {
-      jQuery(".title, .subtitle").animate({ color: "#000" }, 1000);
+      jQuery(this).animate({ boxShadow: "inset 0 0 0 1000px rgba(255, 255, 255, .5)" }, 1000);
     });
 
     },

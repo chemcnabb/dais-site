@@ -5883,6 +5883,9 @@ button.close {
 .navbar-collapse.collapse.in {
   display: block !important; }
 
+.navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
+  background-color: #000; }
+
 .watch-logo-container {
   border: 1px solid black;
   padding: 15px;
@@ -5902,9 +5905,10 @@ button.close {
     min-height: 250px; }
 
 .watch-title {
-  margin: 0 15px 45px 0;
+  margin: 10px 15px 35px 15px;
   border-bottom: 1px solid black;
-  position: relative; }
+  position: relative;
+  padding-bottom: 15px; }
   .watch-title h1 {
     font-size: 24px;
     font-weight: bold;
@@ -5932,8 +5936,12 @@ button.close {
   height: 140px;
   width: 200px; }
 
+.watch-title-content {
+  padding-left: 0; }
+
 .listen {
-  background-color: #e6e6e6; }
+  background-color: #e6e6e6;
+  padding-top: 10px; }
 
 .viewport-listen {
   height: 83vh;
@@ -5941,7 +5949,7 @@ button.close {
   background-size: contain;
   background-position: center 25px;
   background-origin: content-box;
-  padding-left: 25px; }
+  padding-right: 0; }
 
 .listen-row {
   display: -webkit-box;
@@ -5968,6 +5976,23 @@ button.close {
   -o-transition: border 0.2s ease-in-out;
   transition: border 0.2s ease-in-out; }
 
+.listen-title {
+  margin: 0 15px 45px 0px;
+  border-bottom: 1px solid black;
+  position: relative; }
+  .listen-title h1 {
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase; }
+  .listen-title .watch-title-logo {
+    padding-right: 0 !important;
+    position: absolute;
+    bottom: -1px;
+    right: 0; }
+
+.listen-title-content {
+  padding: 0 0 15px 0; }
+
 .event-poster {
   height: 0;
   width: 100%;
@@ -5981,13 +6006,34 @@ button.close {
 
 .event-title hr {
   margin-top: 10px;
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  margin-right: 15px; }
+
+#toggleCalendar {
+  float: right;
+  position: relative;
+  margin: 25px 25px 0px 25px; }
+
+.event-block {
+  padding-top: 15px; }
+
+.events h1 {
+  font-size: 16px;
+  text-transform: uppercase;
+  padding-bottom: 15px; }
+
+.events h3 {
+  font-size: 14px; }
 
 table.month {
   width: 100%;
   max-width: 100% !important;
   margin: 25px auto auto auto !important;
   height: 70vh; }
+
+#event-calendar {
+  overflow: hidden;
+  display: none; }
 
 .page-header {
   background-color: #efefef;
@@ -6154,6 +6200,9 @@ body {
 .show-header {
   display: block; }
 
+a {
+  color: #000; }
+
 .content {
   position: relative;
   padding: 14px;
@@ -6233,8 +6282,7 @@ body {
   box-shadow: inset 0 0 0 1000px rgba(255, 255, 255, 0.5); }
 
 .viewport:hover, .viewport:focus {
-  color: #fff;
-  box-shadow: inset 0 0 0 1000px rgba(255, 255, 255, 0); }
+  color: #fff; }
 
 .content:hover > .copy-headings > .watch-link, .content:focus > .copy-headings > .watch-link, .content:hover > .copy-headings > .title-line, .content:focus > .copy-headings > .title-line {
   border-color: #fff;
@@ -6260,4 +6308,4 @@ body {
   .viewport .content {
     padding-top: 0.1px; } }
 
-/*# sourceMappingURL=main-311cb9a318e50da9ada4.css.map*/
+/*# sourceMappingURL=main-126bd08f91609bc409fd.css.map*/

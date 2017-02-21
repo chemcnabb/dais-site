@@ -46,7 +46,7 @@ var DaisController =
 /***/ function(module, exports, __webpack_require__) {
 
 	__webpack_require__(1);
-	module.exports = __webpack_require__(19);
+	module.exports = __webpack_require__(20);
 
 
 /***/ },
@@ -59,10 +59,12 @@ var DaisController =
 	let Utilities = __webpack_require__(16);
 	let HomeController = __webpack_require__(17);
 	let WatchController = __webpack_require__(18);
+	let EventController = __webpack_require__(19);
 	
 	window.WatchController = WatchController;
 	window.HomeController = HomeController;
 	window.Utilities = Utilities;
+	window.EventController = EventController;
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
@@ -12750,7 +12752,7 @@ var DaisController =
 	            console.log($parent);
 	            $this.remove();
 	
-	            $parent.append('<iframe class="col-md-12 viewport" src="https://player.vimeo.com/video/' + videoId + '?color=ffffff&title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>');
+	            $parent.append('<iframe class="col-md-12 viewport" src="https://player.vimeo.com/video/' + videoId + '?color=ffffff&title=0&byline=0&portrait=0&autoplay=1" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>');
 	        });
 	    }
 	};
@@ -12781,9 +12783,9 @@ var DaisController =
 	            });
 	        });
 	        jQuery(".viewport, .viewport-half").hover(function () {
-	            jQuery(".title, .subtitle").animate({ color: "#fff" }, 1000);
+	            jQuery(this).animate({ boxShadow: "inset 0 0 0 1000px rgba(255, 255, 255, 0)" }, 1000);
 	        }, function () {
-	            jQuery(".title, .subtitle").animate({ color: "#000" }, 1000);
+	            jQuery(this).animate({ boxShadow: "inset 0 0 0 1000px rgba(255, 255, 255, .5)" }, 1000);
 	        });
 	    }
 	};
@@ -12811,8 +12813,35 @@ var DaisController =
 /* 19 */
 /***/ function(module, exports) {
 
+	/**
+	 * Created by STO-SD003 on 2017-01-23.
+	 */
+	
+	const WatchController = {
+	    init: function () {
+	        const $ = jQuery;
+	        $("#toggleCalendar").on("click", function () {
+	            $("#event-calendar").slideToggle("slow", function () {
+	                // Animation complete.
+	                if ($("#event-calendar").is(":hidden")) {
+	                    $("#toggleCalendar").text("Show Calendar");
+	                } else {
+	                    $("#toggleCalendar").text("Hide Calendar");
+	                }
+	            });
+	        });
+	    }
+	
+	};
+	
+	module.exports = WatchController;
+
+/***/ },
+/* 20 */
+/***/ function(module, exports) {
+
 	// removed by extract-text-webpack-plugin
 
 /***/ }
 /******/ ]);
-//# sourceMappingURL=main-311cb9a318e50da9ada4.js.map
+//# sourceMappingURL=main-126bd08f91609bc409fd.js.map

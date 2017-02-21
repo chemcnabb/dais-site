@@ -10,5 +10,9 @@
 
 {% block content %}{% endblock content %}
 <script src="{% static 'happenings/js/calendar.js' %}"></script>
-{% block extra_js %}{% endblock extra_js %}
+{% block extra_js %}
+    <script>
+        EventController.init();
+    </script>
+{% endblock %}
 

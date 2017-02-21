@@ -1,5 +1,6 @@
 .listen{
   background-color:#e6e6e6;
+      padding-top: 10px;
 }
 .viewport-listen {
     height: 83vh;
@@ -7,7 +8,7 @@
     background-size: contain;
     background-position: center 25px;
   background-origin: content-box;
-  padding-left:25px;
+      padding-right: 0;
 }
 .listen-row {
   display: -webkit-box;
@@ -34,4 +35,29 @@
     -webkit-transition: border 0.2s ease-in-out;
     -o-transition: border 0.2s ease-in-out;
     transition: border 0.2s ease-in-out;
+}
+
+.listen-title{
+          margin: 0 15px 45px 0px;
+    border-bottom: 1px solid black;
+    position: relative;
+  h1{
+    font-size:24px;
+    font-weight: bold;
+    text-transform:uppercase;
+
+  }
+  p{
+
+  }
+  .watch-title-logo{
+    padding-right:0 !important;
+        position: absolute;
+    bottom: -1px;
+    right: 0;
+  }
+}
+
+.listen-title-content{
+  padding: 0 0 15px 0;
 }

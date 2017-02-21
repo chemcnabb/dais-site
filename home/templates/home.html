@@ -2,42 +2,48 @@
 {% block page-class %}home{% endblock %}
 {% block content %}
     <div class="row ">
-        <div class="col-md-12 viewport watch" style="background-image: url(/static/test_resources/image_test_1.jpg);">
+        <a href="{% url "watch" "demo" %}">
+            <div class="col-md-12 viewport watch" style="background-image: url(/static/test_resources/image_test_1.jpg);">
             <div class="content">
                 <div class="copy-headings">
                     <div class="title">r.e.d</div>
                     <div class="subtitle">a tribe called red featuring yaslin & narcy</div>
                     <hr class="title-line"/>
-                    <a href="{% url "watch" "demo" %}" class="watch-link">watch</a>
+                    <span class="watch-link">watch</span>
                 </div>
 
             </div>
             <div class="copy-drawer"></div>
         </div>
+        </a>
 
     </div>
     <div class="row ">
+    <a href="{% url "look" "demo" %}">
         <div class="col-sm-6 viewport-half look" style="background-image: url(/static/test_resources/image_test_2.jpg);">
             <div class="content">
                 <div class="copy-headings">
                     <div class="title">r.e.d</div>
                     <div class="subtitle">a tribe called red featuring yaslin & narcy</div>
                     <hr class="title-line"/>
-                    <a href="{% url "look" "demo" %}" class="watch-link">look</a>
+                    <span class="watch-link">look</span>
                 </div>
             </div>
             <div class="copy-drawer"></div>
         </div>
+    </a>
+        <a href="{% url "listen" "demo" %}">
         <div class="col-sm-6 viewport-half listen" style="background-image: url(/static/test_resources/image_test_3.jpg);">
             <div class="content">
                 <div class="copy-headings">
                     <div class="title">r.e.d</div>
                     <div class="subtitle">a tribe called red featuring yaslin & narcy</div>
                     <hr class="title-line"/>
-                    <a href="{% url "listen" "demo" %}" class="watch-link">listen</a>
+                    <span  class="watch-link">listen</span>
                 </div>
             </div>
             <div class="copy-drawer"></div>
         </div>
+            </a>
     </div>
 {% endblock content %}

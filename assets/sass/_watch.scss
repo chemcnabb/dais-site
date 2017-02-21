@@ -21,9 +21,10 @@ margin:0;
   }
 }
 .watch-title{
-          margin: 0 15px 45px 0;
+          margin: 10px 15px 35px 15px;
     border-bottom: 1px solid black;
     position: relative;
+  padding-bottom: 15px;
   h1{
     font-size:24px;
     font-weight: bold;
@@ -56,4 +57,7 @@ width:200px;
   flex-direction: column;
   height: 140px;
     width: 200px;
+}
+.watch-title-content{
+  padding-left:0;
 }
