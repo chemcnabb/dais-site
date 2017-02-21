@@ -1,49 +1,67 @@
 {% extends "base.html" %}
+{% load site_filters %}
 {% block page-class %}home{% endblock %}
 {% block content %}
-    <div class="row ">
-        <a href="{% url "watch" "demo" %}">
-            <div class="col-md-12 viewport watch" style="background-image: url(/static/test_resources/image_test_1.jpg);">
-            <div class="content">
-                <div class="copy-headings">
-                    <div class="title">r.e.d</div>
-                    <div class="subtitle">a tribe called red featuring yaslin & narcy</div>
-                    <hr class="title-line"/>
-                    <span class="watch-link">watch</span>
-                </div>
+
+    {% for post in post_list %}
+        {% with post.0 as post  %}
+
+        {% if forloop.counter|divisibleby:3 %}
+
+            <div class="row ">
+
+                <a href="{{ post.get_url }}">
+                    <div class="col-sm-6 viewport-half look"
+                         style="background-image: url(/static/{{ post.poster_image.url }});">
+                        <div class="content">
+                            <div class="copy-headings">
+                                <div class="title">{{ post.title }}</div>
+                                <div class="subtitle">{{ post.subtitle }}</div>
+                                <hr class="title-line"/>
+                                <span class="watch-link">{{ post.category }}</span>
+                            </div>
+                        </div>
+                        <div class="copy-drawer"></div>
+                    </div>
+                </a>
+                <a href="{{ post.get_url }}">
+                    <div class="col-sm-6 viewport-half listen"
+                         style="background-image: url(/static/{{ post.poster_image }});">
+                        <div class="content">
+                            <div class="copy-headings">
+                                <div class="title">{{ post.title }}</div>
+                                <div class="subtitle">{{ post.subtitle }}</div>
+                                <hr class="title-line"/>
+                                <span class="watch-link">{{ post.category }}</span>
+                            </div>
+                        </div>
+                        <div class="copy-drawer"></div>
+                    </div>
+                </a>
+            </div>
+        {% else %}
+
+            <div class="row ">
+                <a href="{{ post.get_url }}">
+                    <div class="col-md-12 viewport watch"
+                         style="background-image: url(/static/{{ post.poster_image.url }});">
+                        <div class="content">
+                            <div class="copy-headings">
+                                <div class="title">{{ post.title }}</div>
+                                <div class="subtitle">{{ post.subtitle }}</div>
+                                <hr class="title-line"/>
+                                <span class="watch-link">{{ post.category }}</span>
+                            </div>
+
+                        </div>
+                        <div class="copy-drawer"></div>
+                    </div>
+                </a>
 
             </div>
-            <div class="copy-drawer"></div>
-        </div>
-        </a>
+        {% endif %}
+        {% endwith %}
+    {% endfor %}
 
-    </div>
-    <div class="row ">
-    <a href="{% url "look" "demo" %}">
-        <div class="col-sm-6 viewport-half look" style="background-image: url(/static/test_resources/image_test_2.jpg);">
-            <div class="content">
-                <div class="copy-headings">
-                    <div class="title">r.e.d</div>
-                    <div class="subtitle">a tribe called red featuring yaslin & narcy</div>
-                    <hr class="title-line"/>
-                    <span class="watch-link">look</span>
-                </div>
-            </div>
-            <div class="copy-drawer"></div>
-        </div>
-    </a>
-        <a href="{% url "listen" "demo" %}">
-        <div class="col-sm-6 viewport-half listen" style="background-image: url(/static/test_resources/image_test_3.jpg);">
-            <div class="content">
-                <div class="copy-headings">
-                    <div class="title">r.e.d</div>
-                    <div class="subtitle">a tribe called red featuring yaslin & narcy</div>
-                    <hr class="title-line"/>
-                    <span  class="watch-link">listen</span>
-                </div>
-            </div>
-            <div class="copy-drawer"></div>
-        </div>
-            </a>
-    </div>
+
 {% endblock content %}

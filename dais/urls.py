@@ -30,6 +30,7 @@ from django.views.generic import TemplateView
 from django.conf.urls import include
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+url(r'^tinymce/', include('tinymce.urls')),
     url(r'^$', HomeView.as_view()),
     url(r"^watch/(?P<watch_slug>\w+)/$", WatchView.as_view(), name="watch"),
     url(r'^look/(?P<look_slug>\w+)/$', LookView.as_view(), name="look"),

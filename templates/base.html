@@ -20,7 +20,7 @@
 
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="dais-logo-wrapper">
-        <a href="/"><img class="dais-logo" src="/static/imgs/dais_logo.svg" /></a>
+        <a href="/"><img class="dais-logo" src="/static/imgs/dais_logo.svg"/></a>
     </div>
     <div class="navbar-header">
 
@@ -42,21 +42,21 @@
             <li><a href="/team">Team</a></li>
             <li class="middle-section">
                 <div class="page-filters">
-                <div class="btn-group">
-                  <button type="button" id="watch" class="btn btn-primary filter-buttons">Watch</button>
-                  <button type="button" id="look" class="btn btn-primary filter-buttons">Look</button>
-                  <button type="button" id="listen" class="btn btn-primary filter-buttons">Listen</button>
-                </div>
+                    <div class="btn-group">
+                        <button type="button" id="watch" class="btn btn-primary filter-buttons">Watch</button>
+                        <button type="button" id="look" class="btn btn-primary filter-buttons">Look</button>
+                        <button type="button" id="listen" class="btn btn-primary filter-buttons">Listen</button>
+                    </div>
                 </div>
             </li>
             <li class="pull-right">
                 <div class="page-filters--right">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-primary">@daiscreates</button>
-                  <button type="button" class="btn btn-primary">INSTAGRAM</button>
-                  <button type="button" class="btn btn-primary">TWITTER</button>
-                  <button type="button" class="btn btn-primary">FACEBOOK</button>
-                </div>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-primary">@daiscreates</button>
+                        <button type="button" class="btn btn-primary">INSTAGRAM</button>
+                        <button type="button" class="btn btn-primary">TWITTER</button>
+                        <button type="button" class="btn btn-primary">FACEBOOK</button>
+                    </div>
                 </div>
             </li>
         </ul>
@@ -65,22 +65,86 @@
 </nav>
 <div class="container-fluid header-wrap {% block no-header %}no-header{% endblock %}">
     <div class="page-header text-center">
-  <h1>{% block page-title %}{% endblock %}</h1>
-    <hr class="hr-bold" />
+        <h1>{% block page-title %}{% endblock %}</h1>
+        <hr class="hr-bold"/>
 
-</div>
+    </div>
 </div>
 <div class="container-fluid">
-
 
 
     <!-- Example row of columns -->
     {% block content %}{% endblock content %}
     <hr>
-
+<div class="footer-wrapper">
     <footer>
-        <p>footer</p>
+        <div class="row">
+            <div class="col-md-12">
+
+
+                <div id="search-input">
+                    <div class="input-group">
+<div class="dais-logo-sm"><img src="/static/imgs/dais-logo-sm.png"/></div>
+                    <span class="input-group-btn">
+                        <button class="btn btn-info btn-lg" type="button">
+                            <i class="glyphicon glyphicon-search"></i>
+                        </button>
+                    </span>
+                        <input type="text" class="form-control input-lg" placeholder="Buscar"/>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+
+                <div class="social-share footer-share">
+                    <ul>
+                        <li>
+                            @daiscreates
+                        </li>
+                        <li>
+                            twitter
+                        </li>
+                        <li>
+                            instagram
+                        </li>
+                        <li>
+                            facebook
+                        </li>
+
+
+                    </ul>
+                </div>
+            </div>
+{#            <div class="col-sm-6 pull-right right-footer-nav">#}
+{#                <div class="social-share footer-share">#}
+{#                    <ul>#}
+{#                        <li>#}
+{#                            privacy#}
+{#                        </li>#}
+{#                        <li>#}
+{#                            terms & conditions#}
+{#                        </li>#}
+{#                        <li>#}
+{#                            dais creative inc.#}
+{#                        </li>#}
+{#                        <li>#}
+{#                            copyright 2018#}
+{#                        </li>#}
+{##}
+{##}
+{#                    </ul>#}
+{#                </div>#}
+{#            </div>#}
+        </div>
+
     </footer>
+</div>
 </div> <!-- /container -->
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js"></script>

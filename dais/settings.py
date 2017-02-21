@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 'django.contrib.humanize',
+'tinymce',
     'webpack_loader',
     'happenings',
     'home',
@@ -145,4 +146,14 @@ WEBPACK_LOADER = {
     }
 }
 
+TINYMCE_DEFAULT_CONFIG = {
+    'plugins': "table,spellchecker,paste,searchreplace",
+    'theme': "advanced",
+    'cleanup_on_startup': True,
+    'theme_advanced_buttons1': 'bold,italic,underline,bullist,numlist,|,link,unlink, code',
+
+    'custom_undo_redo_levels': 10,
+}
+
 CALENDAR_SHOW_LIST = True
+

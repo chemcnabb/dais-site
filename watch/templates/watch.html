@@ -2,7 +2,7 @@
 {% block page-class %}watch{% endblock %}
 {% block content %}
     <div class="row  row-full-override">
-        <div class="col-md-12 viewport vimeo-img" style="background-image: url(/static/test_resources/image_test_1.jpg);">
+        <div class="col-md-12 viewport vimeo-img" style="background-image: url(/static/{{ watch.poster_image.url }});">
 
             <div class="play-btn"></div>
         </div>
@@ -13,10 +13,10 @@
      <div class="row watch-title">
         <div class="col-md-10 watch-title-content" style="">
 
-                <h1>r.e.d</h1>
-                    <p class="subtitle">A Tribe Called Red featuring Yasiin Bey & Narcy</p>
-                    <p class="subtitle">Directed by Sol G and the Hallucination</p>
-                    <p class="subtitle">Shot in South Africa</p>
+                <h1>{{ watch.title }}</h1>
+                    <p class="subtitle">{{ watch.subtitle }}</p>
+                    <p class="subtitle">{{ watch.credits }}</p>
+                    <p class="subtitle">{{ watch.detail }}</p>
 
 
 
@@ -59,6 +59,6 @@ detracto consectetuer usu cu, oratio pertinacia scribentur ut eam.</p>
 
 {% block extra_js %}
     <script>
-        WatchController.initVideo(201926108);
+        WatchController.initVideo({{ watch.vimeo_id }});
     </script>
 {% endblock %}
