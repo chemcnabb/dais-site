@@ -27,5 +27,6 @@ class ListenPost(models.Model):
         return "/listen/%s" % self.slug
 
     def save(self, *args, **kwargs):
-        self.slug = slugify(self.title)
+        if not self.slug:
+            self.slug = slugify(self.title)
         super(ListenPost, self).save(*args, **kwargs)

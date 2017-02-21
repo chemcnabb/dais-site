@@ -27,5 +27,6 @@ class WatchPost(models.Model):
 
 
     def save(self, *args, **kwargs):
-        self.slug = slugify(self.title)
+        if not self.slug:
+            self.slug = slugify(self.title)
         super(WatchPost, self).save(*args, **kwargs)
