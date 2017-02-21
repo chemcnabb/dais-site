@@ -36,3 +36,31 @@
   font-size:14px !important;
   font-weight:bold;
 }
+
+.social-share{
+  margin-top:15px;
+  ul{
+    padding-left:0;
+    display:inline-block;
+    li{
+      display:inline-block;
+      text-transform:uppercase;
+      font-weight:bold;
+      border-right:1px solid black;
+      padding-right:5px;
+      line-height: .9;
+    }
+    li:last-child{
+      border-right:none;
+    }
+  }
+}
+.about-well-footer{
+  label{
+    font-weight:400;
+    text-transform: uppercase;
+  }
+  span{
+    font-weight:bold;
+  }
+}
