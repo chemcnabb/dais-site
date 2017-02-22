@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+"storages",
 'django.contrib.humanize',
 'tinymce',
     'webpack_loader',
@@ -132,7 +133,7 @@ USE_TZ = True
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')
 STATIC_ROOT = os.path.join(BASE_DIR, 'media')
-STATIC_URL = '/static/'
+
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static/assets'), # We do this so that django's collectstatic copies or our bundles to the STATIC_ROOT or syncs them to whatever storage we use.
     os.path.join(BASE_DIR, 'static/'), # We do this so that django's collectstatic copies or our bundles to the STATIC_ROOT or syncs them to whatever storage we use.
@@ -156,4 +157,30 @@ TINYMCE_DEFAULT_CONFIG = {
 }
 
 CALENDAR_SHOW_LIST = True
+
+AWS_HEADERS = {  # see http://developer.yahoo.com/performance/rules.html#expires
+        'Expires': 'Thu, 31 Dec 2099 20:00:00 GMT',
+        'Cache-Control': 'max-age=94608000',
+    }
+
+AWS_S3_SECURE_URLS = False       # use http instead of https
+AWS_QUERYSTRING_AUTH = False                # don't add complex authentication-related query parameters for requests
+AWS_S3_ACCESS_KEY_ID = "AKIAIKSGZVH4GB7MCLVQ"                # Your S3 Access Key
+AWS_S3_SECRET_ACCESS_KEY = "pNC1oxlMcLM3Pbc62Xs/fWKCw2k2y/M3Jdv2AgmT"            # Your S3 Secret
+AWS_STORAGE_BUCKET_NAME = "dais-media"
+AWS_S3_HOST = "s3.ca-central-1.amazonaws.com"  # Change to the media center you chose when creating the bucket
+AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+
+
+
+
+STATICFILES_LOCATION = 'static'
+STATICFILES_STORAGE = 'dais.custom_storages.StaticStorage'
+STATIC_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, STATICFILES_LOCATION)
+
+MEDIAFILES_LOCATION = 'uploads'
+MEDIA_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, MEDIAFILES_LOCATION)
+DEFAULT_FILE_STORAGE = 'dais.custom_storages.MediaStorage'
+
+
 
