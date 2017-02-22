@@ -14,7 +14,7 @@
 
                 <a href="{{ post.get_url }}">
                     <div class="{% cycle "col-md-12 viewport" "col-sm-6 viewport-half" "col-sm-6 viewport-half" %} {{ post.category }}"
-                         style="background-image: url(/static/{{ post.poster_image.url }});">
+                         style="background-image: url({{ post.poster_image.url }});">
                         <div class="content">
                             <div class="copy-headings">
                                 <div class="title">{{ post.title }}</div>
