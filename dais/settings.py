@@ -163,7 +163,7 @@ AWS_HEADERS = {  # see http://developer.yahoo.com/performance/rules.html#expires
         'Cache-Control': 'max-age=94608000',
     }
 
-AWS_S3_SECURE_URLS = False       # use http instead of https
+AWS_S3_SECURE_URLS = True       # use http instead of https
 AWS_QUERYSTRING_AUTH = False                # don't add complex authentication-related query parameters for requests
 AWS_S3_ACCESS_KEY_ID = "AKIAIKSGZVH4GB7MCLVQ"                # Your S3 Access Key
 AWS_S3_SECRET_ACCESS_KEY = "pNC1oxlMcLM3Pbc62Xs/fWKCw2k2y/M3Jdv2AgmT"            # Your S3 Secret
