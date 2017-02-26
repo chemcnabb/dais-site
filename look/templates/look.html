@@ -1,30 +1,60 @@
 {% extends "base.html" %}
-{% block page-class %}watch{% endblock %}
+{% load site_filters %}
+{% block page-class %}look{% endblock %}
 {% block content %}
-    <div class="row ">
-        <div class="col-md-12 viewport" style="background-image: url(/static/test_resources/look_1.png);">
-            <div class="content">
+
+                <div class="row">
+
+                        <div class="{% cycle "col-md-12 viewport" "col-sm-6 viewport-half" "col-sm-6 viewport-half" %} {{ post.category }}"
+                             style="background-image: url({{ look.poster_image.url }});">
+                            <div class="content">
+                                <div class="copy-headings">
+                                    <div class="title">{{ look.title }}</div>
+                                    <div class="subtitle">{{ look.subtitle }}</div>
 
 
-            </div>
+                                </div>
+                            </div>
 
-        </div>
+                        </div>
+
+                </div>
+
+    {% for post in look.lookimage_set.all %}
+        {% if post %}
+
+                {% cycle '<div class="row ">' '<div class="row ">' '' %}
 
 
-    </div>
 
 
-     <div class="row ">
-        <div class="col-md-12" style="">
 
-        </div>
+                <a href="{{ post.get_url }}">
+                    <div class="{% cycle "col-md-12 viewport" "col-sm-6 viewport-half" "col-sm-6 viewport-half" %} {{ post.category }}"
+                         style="background-image: url({{ post.image.url }});">
 
-    </div>
-    <hr>
-    <div class="row ">
-        <div class="col-md-12" style="">
 
-        </div>
+                    </div>
+                </a>
 
-    </div>
+
+
+                {% if not post_list|length|divisibleby:"3" and forloop.counter|divisibleby:"3" %}
+                    </div>
+                {% else %}
+                    {% cycle "</div>" "" "</div>" %}
+                {% endif %}
+            {% endif %}
+
+
+    {% endfor %}
+
+
+
+
+
+
+
+
+
 {% endblock content %}

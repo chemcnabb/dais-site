@@ -94,6 +94,7 @@ if os.environ.get('DATABASE_URL', None):
 else:
     DATABASES['default'] = dj_database_url.config(default='postgres://STO-SD003:Wh0ar3y0u@localhost/dais')
 DATABASES['default']['ENGINE'] = 'django.db.backends.postgresql_psycopg2'
+DATABASES['default']['NAME'] = 'dais'
 
 # Password validation
 # https://docs.djangoproject.com/en/1.9/ref/settings/#auth-password-validators
@@ -165,9 +166,8 @@ AWS_HEADERS = {  # see http://developer.yahoo.com/performance/rules.html#expires
 
 AWS_S3_SECURE_URLS = True       # use http instead of https
 AWS_QUERYSTRING_AUTH = False                # don't add complex authentication-related query parameters for requests
-AWS_S3_ACCESS_KEY_ID = os.environ.get("AWS_S3_ACCESS_KEY_ID")
-AWS_S3_SECRET_ACCESS_KEY = os.environ.get("AWS_S3_SECRET_ACCESS_KEY")
-
+AWS_S3_ACCESS_KEY_ID = os.environ.get("AWS_S3_ACCESS_KEY_ID", "NO ID")
+AWS_S3_SECRET_ACCESS_KEY = os.environ.get("AWS_S3_SECRET_ACCESS_KEY", "NO KEY")
 AWS_STORAGE_BUCKET_NAME = "dais-media"
 AWS_S3_HOST = "s3.ca-central-1.amazonaws.com"  # Change to the media center you chose when creating the bucket
 AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME

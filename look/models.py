@@ -12,9 +12,8 @@ class LookPost(models.Model):
     title = models.CharField(max_length=500,blank=True, null=True)
     subtitle = models.CharField(max_length=500,blank=True, null=True)
     credits = models.CharField(max_length=500,blank=True, null=True)
-    detail = models.CharField(max_length=500,blank=True, null=True)
-    vimeo_id = models.CharField(max_length=500, blank=True, null=True)
     description = HTMLField(blank=True, null=True)
+
     slug = models.SlugField(blank=True, null=True)
 
     def __unicode__(self):
@@ -30,3 +29,9 @@ class LookPost(models.Model):
         if not self.slug:
             self.slug = slugify(self.title)
         super(LookPost, self).save(*args, **kwargs)
+
+class LookImage(models.Model):
+    image = models.ImageField(blank=True, null=True)
+    credits = models.CharField(max_length=500, blank=True, null=True)
+    description = HTMLField(blank=True, null=True)
+    post = models.ForeignKey("LookPost", null=True, blank=True)
