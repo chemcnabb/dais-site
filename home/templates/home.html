@@ -29,11 +29,9 @@
 
 
 
-            {% if not post_list|length|divisibleby:"3" and forloop.counter|divisibleby:"3" %}
-                </div>
-            {% else %}
+
                 {% cycle "</div>" "" "</div>" %}
-            {% endif %}
+
         {% endif %}
 
     {% endfor %}
