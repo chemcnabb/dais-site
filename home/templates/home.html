@@ -4,6 +4,7 @@
 {% block content %}
 
     {% for post in post_list %}
+        {% row_counter as row_count %}
 
         {% if post %}
 
@@ -31,12 +32,15 @@
 
 
 
-            {% if not post_list|length|divisibleby:"3" and forloop0.counter|divisibleby:"2" %}
-                </div>
-            {% else %}
-                {% cycle "</div>" "" "</div>" %}
-            {% endif %}
+
+            {% cycle "</div>" "" "</div>" %}
+
         {% endif %}
+        {% ifequal row_count 2 %}
+            {% if forloop.last %}
+                </div>
+            {% endif %}
+        {% endifequal %}
 
     {% endfor %}
 

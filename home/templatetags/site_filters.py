@@ -29,12 +29,6 @@ class CycleNode(Node):
 
 @register.simple_tag(takes_context=True)
 def row_counter(context):
-
-
-    row_count = context["row_count"]
-    if row_count == 0:
-        row_count = 1
-    else:
-        row_count = 0
-    context["row_count"] = row_count
-    return row_count
+    counter = context["forloop"]["counter"]
+    odd = counter % 3
+    return odd
