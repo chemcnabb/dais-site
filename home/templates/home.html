@@ -4,37 +4,37 @@
 {% block content %}
 
     {% for post in post_list %}
-            {% if post %}
+        {% if post %}
 
-                    {% cycle '<div class="row ">' '<div class="row ">' '' %}
-
-
+            {% cycle '<div class="row ">' '<div class="row ">' '' %}
 
 
 
-                <a href="{{ post.get_url }}">
-                    <div class="{% cycle "col-md-12 viewport" "col-sm-6 viewport-half" "col-sm-6 viewport-half" %} {{ post.category }}"
-                         style="background-image: url({{ post.poster_image.url }});">
-                        <div class="content">
-                            <div class="copy-headings">
-                                <div class="title">{{ post.title }}</div>
-                                <div class="subtitle">{{ post.subtitle }}</div>
-                                <hr class="title-line"/>
-                                <span class="watch-link">{{ post.category }}</span>
-                            </div>
+
+
+            <a href="{{ post.get_url }}">
+                <div class="{% cycle "col-md-12 viewport" "col-sm-6 viewport-half" "col-sm-6 viewport-half" %} {{ post.category }}"
+                     style="background-image: url({{ post.poster_image.url }});">
+                    <div class="content">
+                        <div class="copy-headings">
+                            <div class="title">{{ post.title }}</div>
+                            <div class="subtitle">{{ post.subtitle }}</div>
+                            <hr class="title-line"/>
+                            <span class="watch-link">{{ post.category }}</span>
                         </div>
-                        <div class="copy-drawer"></div>
                     </div>
-                </a>
+                    <div class="copy-drawer"></div>
+                </div>
+            </a>
 
 
-{##}
-{% if not post_list|length|divisibleby:"3" and forloop.counter|divisibleby:"3" %}
-    </div>
-    {% else %}
-            {% cycle "</div>" "" "</div>" %}
-{% endif %}
+
+            {% if not post_list|length|divisibleby:"3" and forloop.counter|divisibleby:"3" %}
+                </div>
+            {% else %}
+                {% cycle "</div>" "" "</div>" %}
             {% endif %}
+        {% endif %}
 
     {% endfor %}
 
