@@ -2,7 +2,7 @@
 {% load humanize %}
 <div id="event-list">
 
-    {% for day, list in events %}
+    {% for day, list in events.reverse %}
         {% for event in list %}
             {% with colors=event.get_colors %}
                 <div class="row"
