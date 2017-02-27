@@ -16,4 +16,6 @@ class HomeView(TemplateView):
             key=lambda instance: instance.date
         )
 
+        context["row_count"] = 0
+
         return context
