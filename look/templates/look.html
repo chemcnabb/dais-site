@@ -3,48 +3,51 @@
 {% block page-class %}look-page{% endblock %}
 {% block content %}
 
-                <div class="row">
+    <div class="row">
 
-                        <div class="{% cycle "col-md-12 viewport" "col-sm-6 viewport-half" "col-sm-6 viewport-half" %} {{ post.category }}"
-                             style="background-image: url({{ look.poster_image.url }});">
-                            <div class="content">
-                                <div class="copy-headings">
-                                    <div class="title">{{ look.title }}</div>
-                                    <div class="subtitle">{{ look.subtitle }}</div>
+        <div class="{% cycle "col-md-12 viewport" "col-sm-6 viewport-half" "col-sm-6 viewport-half" %} {{ post.category }}"
+             style="background-image: url({{ look.poster_image.url }});">
+            <div class="content">
+                <div class="copy-headings">
+                    <div class="title">{{ look.title }}</div>
+                    <div class="subtitle">{{ look.subtitle }}</div>
 
-
-                                </div>
-                            </div>
-
-                        </div>
 
                 </div>
+            </div>
+
+        </div>
+
+    </div>
 
     {% for post in look.lookimage_set.all %}
+
         {% if post %}
-
-                {% cycle '<div class="row ">' '<div class="row ">' '' %}
-
-
+            {% row_counter as row_count %}
+            {% cycle '<div class="row ">' '<div class="row ">' '' %}
 
 
 
-                <a href="{{ post.get_url }}">
-                    <div class="{% cycle "col-md-12 viewport" "col-sm-6 viewport-half" "col-sm-6 viewport-half" %} {{ post.category }}"
-                         style="background-image: url({{ post.image.url }});">
 
 
+            <a href="{{ post.get_url }}">
+                <div class="{% cycle "col-md-12 viewport" "col-sm-6 viewport-half" "col-sm-6 viewport-half" %} {{ post.category }}"
+                     style="background-image: url({{ post.image.url }});">
+
+
+                </div>
+            </a>
+
+
+
+
+            {% cycle "</div>" "" "</div>" %}
+            {% ifequal row_count 2 %}
+                {% if forloop.last %}
                     </div>
-                </a>
-
-
-
-                {% if not post_list|length|divisibleby:"3" and forloop.counter|divisibleby:"3" %}
-                    </div>
-                {% else %}
-                    {% cycle "</div>" "" "</div>" %}
                 {% endif %}
-            {% endif %}
+            {% endifequal %}
+        {% endif %}
 
 
     {% endfor %}

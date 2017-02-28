@@ -15,7 +15,7 @@ class HomeView(TemplateView):
             chain(WatchPost.objects.all(), LookPost.objects.all(), ListenPost.objects.all()),
             key=lambda instance: instance.date
         )
-
+        context["post_list"].reverse()
         context["row_count"] = 0
 
         return context
