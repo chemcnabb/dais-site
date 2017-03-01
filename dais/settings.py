@@ -94,7 +94,7 @@ if os.environ.get('DATABASE_URL', None):
 else:
     DATABASES['default'] = dj_database_url.config(default='postgres://STO-SD003:Wh0ar3y0u@localhost/dais')
 DATABASES['default']['ENGINE'] = 'django.db.backends.postgresql_psycopg2'
-# DATABASES['default']['NAME'] = 'dais'
+DATABASES['default']['NAME'] = 'dais'
 
 # Password validation
 # https://docs.djangoproject.com/en/1.9/ref/settings/#auth-password-validators

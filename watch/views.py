@@ -12,6 +12,6 @@ class WatchView(TemplateView):
         slug = kwargs['watch_slug']
         context = super(WatchView, self).get_context_data(**kwargs)
         context["watch"] = get_object_or_404(WatchPost,slug=slug)
-        context["watch_more"] = WatchPost.objects.exclude(pk=context["watch"].pk).order_by('date')[:3]
+        context["watch_more"] = WatchPost.objects.exclude(pk=context["watch"].pk).order_by('-date')[:3]
 
         return context
