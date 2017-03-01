@@ -10,14 +10,13 @@
     </div>
 
 
-     <div class="row watch-title">
+    <div class="row watch-title">
         <div class="col-md-10 watch-title-content" style="">
 
-                <h1>{{ watch.title }}</h1>
-                    <p class="subtitle">{{ watch.subtitle }}</p>
-                    <p class="subtitle">{{ watch.credits }}</p>
-                    <p class="subtitle">{{ watch.detail }}</p>
-
+            <h1>{{ watch.title }}</h1>
+            <p class="subtitle">{{ watch.subtitle }}</p>
+            <p class="subtitle">{{ watch.credits }}</p>
+            <p class="subtitle">{{ watch.detail }}</p>
 
 
         </div>
@@ -25,7 +24,7 @@
             <div class="watch-logo-container pull-right">
                 <span class="watch-date">01.09.2016</span>
                 <hr class="watch-date-line"/>
-                <img src="/static/imgs/icons/watch-icon.svg" />
+                <img src="/static/imgs/icons/watch-icon.svg"/>
             </div>
         </div>
 
@@ -33,24 +32,33 @@
 
     <div class="row watch-copy">
         <div class="col-sm-7 col-md-7 col-lg-7 watch-copy-body" style="">
-{% autoescape off %}{{ watch.description }}{% endautoescape %}
+            {% autoescape off %}{{ watch.description }}{% endautoescape %}
         </div>
         <div class="col-sm-5 col-md-5 col-lg-5" style="">
-<div class="row">
-                <div class="col-sm-3 watch-next-thumb"><div class="watch-more">watch more</div></div>
-    {% for more in watch_more %}
-        {% if forloop.first %}
-                <a href="{{ more.get_url }}"><div class="col-sm-3 watch-next-thumb"style="background-image: url({{ more.poster_image.url }});"></div></a></div>
             <div class="row">
-        {% endif %}
+                <div class="col-sm-3 watch-next-thumb">
+                    <div class="watch-more">watch more</div>
+                </div>
+                {% for more in watch_more %}
+                    {% if forloop.first %}
+                        <a href="{{ more.get_url }}">
+                            <div class="col-sm-3 watch-next-thumb"
+                                 style="background-image: url({{ more.poster_image.url }});"></div>
+                        </a></div>
+                        <div class="row">
+                    {% else %}
 
 
-                <a href="{{ more.get_url }}"><div class="col-sm-3 watch-next-thumb"style="background-image: url({{ more.poster_image.url }});"></div></a>
+                    <a href="{{ more.get_url }}">
+                        <div class="col-sm-3 watch-next-thumb"
+                             style="background-image: url({{ more.poster_image.url }});"></div>
+                    </a>
 
-    {% if forloop.last %}
-    </div>
-        {% endif %}
-{% endfor %}
+                    {% if forloop.last %}
+                        </div>
+                    {% endif %}
+                    {% endif %}
+                {% endfor %}
 
 
         </div>
