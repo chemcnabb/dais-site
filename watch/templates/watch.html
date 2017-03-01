@@ -32,19 +32,26 @@
     </div>
 
     <div class="row watch-copy">
-        <div class="col-sm-6 col-md-6 col-lg-7 watch-copy-body" style="">
+        <div class="col-sm-7 col-md-7 col-lg-7 watch-copy-body" style="">
 {% autoescape off %}{{ watch.description }}{% endautoescape %}
         </div>
-        <div class="col-sm-6 col-md-6 col-lg-5" style="">
+        <div class="col-sm-5 col-md-5 col-lg-5" style="">
 <div class="row">
                 <div class="col-sm-3 watch-next-thumb"><div class="watch-more">watch more</div></div>
-                <div class="col-sm-3 watch-next-thumb"><img src="/static/test_resources/next-thumb.jpg"/></div></div>
-<div class="row">
+    {% for more in watch_more %}
+        {% if forloop.first %}
+                <a href="{{ more.get_url }}"><div class="col-sm-3 watch-next-thumb"style="background-image: url({{ more.poster_image.url }});"></div></a></div>
+            <div class="row">
+        {% endif %}
 
-                <div class="col-sm-3 watch-next-thumb"><img src="/static/test_resources/next-thumb.jpg"/></div>
-                <div class="col-sm-3 watch-next-thumb"><img src="/static/test_resources/next-thumb.jpg"/></div>
 
-</div>
+                <a href="{{ more.get_url }}"><div class="col-sm-3 watch-next-thumb"style="background-image: url({{ more.poster_image.url }});"></div></a>
+
+    {% if forloop.last %}
+    </div>
+        {% endif %}
+{% endfor %}
+
 
         </div>
 
