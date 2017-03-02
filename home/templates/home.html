@@ -6,7 +6,7 @@
     {% for post in post_list %}
         {% row_counter as row_count %}
 
-        {% if post %}
+        {% if post and post.poster_image %}
 
             {% cycle '<div class="row ">' '<div class="row ">' '' %}
 
