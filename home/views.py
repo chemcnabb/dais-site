@@ -12,7 +12,7 @@ class HomeView(TemplateView):
         context = super(HomeView, self).get_context_data(**kwargs)
         # context["post_list"] = list(chain(WatchPost.objects.all(),LookPost.objects.all(), ListenPost.objects.all()))
         context["post_list"] = sorted(
-            chain(WatchPost.objects.exclude(poster_image__isnull=True).all(), LookPost.objects.exclude(poster_image__isnull=True).all(), ListenPost.objects.exclude(poster_image__isnull=True).all()),
+            chain(WatchPost.objects.exclude(poster_image__isnull=True).exclude(poster_image__exact='').all(), LookPost.objects.exclude(poster_image__isnull=True).exclude(poster_image__exact='').all(), ListenPost.objects.exclude(poster_image__isnull=True).exclude(poster_image__exact='').all()),
             key=lambda instance: instance.date
         )
         context["post_list"].reverse()
