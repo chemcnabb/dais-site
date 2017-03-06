@@ -94,7 +94,7 @@ if os.environ.get('DATABASE_URL', None):
 else:
     DATABASES['default'] = dj_database_url.config(default='postgres://STO-SD003:Wh0ar3y0u@localhost/dais')
 DATABASES['default']['ENGINE'] = 'django.db.backends.postgresql_psycopg2'
-# DATABASES['default']['NAME'] = 'dais'
+
 
 # Password validation
 # https://docs.djangoproject.com/en/1.9/ref/settings/#auth-password-validators
@@ -184,4 +184,7 @@ MEDIA_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, MEDIAFILES_LOCATION)
 DEFAULT_FILE_STORAGE = 'dais.custom_storages.MediaStorage'
 
 
-
+try:
+    from .local_setting_override import *
+except:
+    pass

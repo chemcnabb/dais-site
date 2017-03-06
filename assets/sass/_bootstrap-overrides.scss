@@ -29,7 +29,9 @@
   margin-top: 18px;
   position: absolute !important;
 }
-
+.container-fluid{
+  overflow:hidden;
+}
 @media (max-width: 767px) {
 
   .navbar-nav > li > a {
@@ -59,6 +61,7 @@
 
 .row-full-override {
   margin-left: -30px;
+  margin-right:-30px !important;
   overflow: hidden;
   iframe {
     width: 102vw !important;

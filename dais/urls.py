@@ -38,7 +38,9 @@ url(r'^tinymce/', include('tinymce.urls')),
     url(r'^radio/$', RadioView.as_view(), name="radio"),
     url(r'^music/$', MusicView.as_view(), name="music"),
     url(r'^events/', include('happenings.urls', namespace='calendar'), name="events"),
+    url(r'^design/$', TemplateView.as_view(template_name='design.html')),
 # url(r'^calendar/', include('happenings.urls', namespace='calendar')),
     url(r'^about/$', AboutView.as_view(), name="about"),
     url(r'^team/$', TeamView.as_view(), name="team"),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+

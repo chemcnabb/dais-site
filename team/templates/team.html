@@ -5,187 +5,94 @@
 {% block content %}
 
 
-    <div class="row no-gutters text-center">
-        <div class="col-xs-4 center-block no-top">
-            <div class="img-viewport" style="background-image: url('/static/test_resources/team-1.png')">
-                <div class="team-member-info">
-                    <h2>Sol Guy</h2>
-                    <hr class="hr-bold"/>
-                    <p>Project Lead</p>
+    <div class="row">
+    {% for member in team_members %}
+        {% if member %}
+        <div class="col-sm-4 center-block no-top">
+            <div class="row no-gutters text-center">
+                <div class="img-viewport" style="background-image: url('{{ member.poster_image.url }}')">
+                    <div class="team-member-info">
+                        <h2>{{ member.full_name }}</h2>
+                        <hr class="hr-bold"/>
+                        <p>{{ member.role }}</p>
 
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="col-xs-4 center-block no-top">
-            <div class="img-viewport" style="background-image: url('/static/test_resources/team-2.png')">
-                <div class="team-member-info">
-                    <h2>Gavin Sheppard</h2>
-                    <hr class="hr-bold"/>
-                    <p>Artist & Repertoire</p>
 
-                </div>
+            <div class="team-copy">
+                {{ member.description }}
             </div>
         </div>
-        <div class="col-xs-4 center-block no-top">
-            <div class="img-viewport" style="background-image: url('/static/test_resources/team-3.png')">
-                <div class="team-member-info">
-                    <h2>Trung Hoang</h2>
-                    <hr class="hr-bold"/>
-                    <p>Id & Ops</p>
-
-                </div>
-            </div>
-        </div>
+    {% endif %}
+    {% endfor %}
+{#        <div class="col-sm-4 center-block no-top">#}
+{#            <div class="row no-gutters text-center">#}
+{#                <div class="img-viewport" style="background-image: url('/static/test_resources/team-2.png')">#}
+{#                    <div class="team-member-info">#}
+{#                        <h2>Gavin Sheppard</h2>#}
+{#                        <hr class="hr-bold"/>#}
+{#                        <p>Artist & Repertoire</p>#}
+{##}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{##}
+{#            <div class="team-copy">#}
+{#                <p>#}
+{#                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam#}
+{#                    congue sollicitudin accumsan. Fusce non elit non libero rhoncus#}
+{#                    ultricies. Nulla malesuada dui orci. Quisque at risus ipsum. Cras#}
+{#                    dignissim lacinia suscipit. Sed pretium vitae lectus vitae dignissim.#}
+{#                    Maecenas ullamcorper fermentum sapien, viverra interdum erat#}
+{#                    ornare tincidunt. Pellentesque quis fermentum velit, aliquet#}
+{#                    consequat justo. Pellentesque quam urna, gravida eget lacinia et,#}
+{#                    facilisis nec enim. Maecenas in consectetur turpis. Curabitur ut#}
+{#                    arcu id justo rhoncus sodales a id velit. Integer vel eleifend diam.#}
+{#                    Etiam dignissim facilisis turpis eu iaculis. Sed eget tempus justo.#}
+{#                    Quisque ut tincidunt lectus, ac pharetra diam.</p>#}
+{##}
+{#                <p>@solguy#}
+{##}
+{#                </p>#}
+{#            </div>#}
+{##}
+{#        </div>#}
+{#        <div class="col-sm-4 center-block no-top">#}
+{#            <div class="row no-gutters text-center">#}
+{#                <div class="img-viewport" style="background-image: url('/static/test_resources/team-3.png')">#}
+{#                    <div class="team-member-info">#}
+{#                        <h2>Trung Hoang</h2>#}
+{#                        <hr class="hr-bold"/>#}
+{#                        <p>Id & Ops</p>#}
+{##}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{##}
+{#            <div class="team-copy">#}
+{#                <p>#}
+{#                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam#}
+{#                    congue sollicitudin accumsan. Fusce non elit non libero rhoncus#}
+{#                    ultricies. Nulla malesuada dui orci. Quisque at risus ipsum. Cras#}
+{#                    dignissim lacinia suscipit. Sed pretium vitae lectus vitae dignissim.#}
+{#                    Maecenas ullamcorper fermentum sapien, viverra interdum erat#}
+{#                    ornare tincidunt. Pellentesque quis fermentum velit, aliquet#}
+{#                    consequat justo. Pellentesque quam urna, gravida eget lacinia et,#}
+{#                    facilisis nec enim. Maecenas in consectetur turpis. Curabitur ut#}
+{#                    arcu id justo rhoncus sodales a id velit. Integer vel eleifend diam.#}
+{#                    Etiam dignissim facilisis turpis eu iaculis. Sed eget tempus justo.#}
+{#                    Quisque ut tincidunt lectus, ac pharetra diam.</p>#}
+{##}
+{#                <p>@solguy#}
+{##}
+{#                </p>#}
+{#            </div>#}
+{##}
+{#        </div>#}
     </div>
-        <div class="row">
-            <div class="col-xs-4 team-copy">
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
-                    congue sollicitudin accumsan. Fusce non elit non libero rhoncus
-                    ultricies. Nulla malesuada dui orci. Quisque at risus ipsum. Cras
-                    dignissim lacinia suscipit. Sed pretium vitae lectus vitae dignissim.
-                    Maecenas ullamcorper fermentum sapien, viverra interdum erat
-                    ornare tincidunt. Pellentesque quis fermentum velit, aliquet
-                    consequat justo. Pellentesque quam urna, gravida eget lacinia et,
-                    facilisis nec enim. Maecenas in consectetur turpis. Curabitur ut
-                    arcu id justo rhoncus sodales a id velit. Integer vel eleifend diam.
-                    Etiam dignissim facilisis turpis eu iaculis. Sed eget tempus justo.
-                    Quisque ut tincidunt lectus, ac pharetra diam.</p>
-
-                    <p>@solguy
-
-                </p>
-            </div>
-            <div class="col-xs-4 team-copy">
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
-                    congue sollicitudin accumsan. Fusce non elit non libero rhoncus
-                    ultricies. Nulla malesuada dui orci. Quisque at risus ipsum. Cras
-                    dignissim lacinia suscipit. Sed pretium vitae lectus vitae dignissim.
-                    Maecenas ullamcorper fermentum sapien, viverra interdum erat
-                    ornare tincidunt. Pellentesque quis fermentum velit, aliquet
-                    consequat justo. Pellentesque quam urna, gravida eget lacinia et,
-                    facilisis nec enim. Maecenas in consectetur turpis. Curabitur ut
-                    arcu id justo rhoncus sodales a id velit. Integer vel eleifend diam.
-                    Etiam dignissim facilisis turpis eu iaculis. Sed eget tempus justo.
-                    Quisque ut tincidunt lectus, ac pharetra diam.</p>
-
-                    <p>@solguy
-
-                </p>
-            </div>
-            <div class="col-xs-4 team-copy">
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
-                    congue sollicitudin accumsan. Fusce non elit non libero rhoncus
-                    ultricies. Nulla malesuada dui orci. Quisque at risus ipsum. Cras
-                    dignissim lacinia suscipit. Sed pretium vitae lectus vitae dignissim.
-                    Maecenas ullamcorper fermentum sapien, viverra interdum erat
-                    ornare tincidunt. Pellentesque quis fermentum velit, aliquet
-                    consequat justo. Pellentesque quam urna, gravida eget lacinia et,
-                    facilisis nec enim. Maecenas in consectetur turpis. Curabitur ut
-                    arcu id justo rhoncus sodales a id velit. Integer vel eleifend diam.
-                    Etiam dignissim facilisis turpis eu iaculis. Sed eget tempus justo.
-                    Quisque ut tincidunt lectus, ac pharetra diam.</p>
-
-                    <p>@solguy
-
-                </p>
-            </div>
-            </div>
 
 
 
-    <div class="row no-gutters text-center">
-        <div class="col-xs-4 center-block no-top">
-            <div class="img-viewport" style="background-image: url('/static/test_resources/team-1.png')">
-                <div class="team-member-info">
-                    <h2>Sol Guy</h2>
-                    <hr class="hr-bold"/>
-                    <p>Project Lead</p>
-
-                </div>
-            </div>
-        </div>
-        <div class="col-xs-4 center-block no-top">
-            <div class="img-viewport" style="background-image: url('/static/test_resources/team-2.png')">
-                <div class="team-member-info">
-                    <h2>Gavin Sheppard</h2>
-                    <hr class="hr-bold"/>
-                    <p>Artist & Repertoire</p>
-
-                </div>
-            </div>
-        </div>
-        <div class="col-xs-4 center-block no-top">
-            <div class="img-viewport" style="background-image: url('/static/test_resources/team-3.png')">
-                <div class="team-member-info">
-                    <h2>Trung Hoang</h2>
-                    <hr class="hr-bold"/>
-                    <p>Id & Ops</p>
-
-                </div>
-            </div>
-        </div>
-        </div>
-
-        <div class="row">
-            <div class="col-xs-4 team-copy">
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
-                    congue sollicitudin accumsan. Fusce non elit non libero rhoncus
-                    ultricies. Nulla malesuada dui orci. Quisque at risus ipsum. Cras
-                    dignissim lacinia suscipit. Sed pretium vitae lectus vitae dignissim.
-                    Maecenas ullamcorper fermentum sapien, viverra interdum erat
-                    ornare tincidunt. Pellentesque quis fermentum velit, aliquet
-                    consequat justo. Pellentesque quam urna, gravida eget lacinia et,
-                    facilisis nec enim. Maecenas in consectetur turpis. Curabitur ut
-                    arcu id justo rhoncus sodales a id velit. Integer vel eleifend diam.
-                    Etiam dignissim facilisis turpis eu iaculis. Sed eget tempus justo.
-                    Quisque ut tincidunt lectus, ac pharetra diam.</p>
-
-                    <p>@solguy
-
-                </p>
-            </div>
-            <div class="col-xs-4 team-copy">
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
-                    congue sollicitudin accumsan. Fusce non elit non libero rhoncus
-                    ultricies. Nulla malesuada dui orci. Quisque at risus ipsum. Cras
-                    dignissim lacinia suscipit. Sed pretium vitae lectus vitae dignissim.
-                    Maecenas ullamcorper fermentum sapien, viverra interdum erat
-                    ornare tincidunt. Pellentesque quis fermentum velit, aliquet
-                    consequat justo. Pellentesque quam urna, gravida eget lacinia et,
-                    facilisis nec enim. Maecenas in consectetur turpis. Curabitur ut
-                    arcu id justo rhoncus sodales a id velit. Integer vel eleifend diam.
-                    Etiam dignissim facilisis turpis eu iaculis. Sed eget tempus justo.
-                    Quisque ut tincidunt lectus, ac pharetra diam.</p>
-
-                    <p>@solguy
-
-                </p>
-            </div>
-            <div class="col-xs-4 team-copy">
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
-                    congue sollicitudin accumsan. Fusce non elit non libero rhoncus
-                    ultricies. Nulla malesuada dui orci. Quisque at risus ipsum. Cras
-                    dignissim lacinia suscipit. Sed pretium vitae lectus vitae dignissim.
-                    Maecenas ullamcorper fermentum sapien, viverra interdum erat
-                    ornare tincidunt. Pellentesque quis fermentum velit, aliquet
-                    consequat justo. Pellentesque quam urna, gravida eget lacinia et,
-                    facilisis nec enim. Maecenas in consectetur turpis. Curabitur ut
-                    arcu id justo rhoncus sodales a id velit. Integer vel eleifend diam.
-                    Etiam dignissim facilisis turpis eu iaculis. Sed eget tempus justo.
-                    Quisque ut tincidunt lectus, ac pharetra diam.</p>
-
-                    <p>@solguy
-
-                </p>
-            </div>
-
-
-        </div>
 
 {% endblock content %}
