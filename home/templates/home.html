@@ -11,14 +11,21 @@
             {% cycle '<div class="row ">' '<div class="row ">' '' %}
 
             <a href="{{ post.get_url }}">
-                <div class="{% cycle "col-md-12 viewport" "col-sm-6 viewport-half" "col-sm-6 viewport-half" %} {{ post.category }}"
-                     style="background-image: url({{ post.poster_image.url }});">
+                {% if row_count == 2 and forloop.last == True %}
+                    <div class="col-md-12 viewport {{ post.category }}"
+
+                {% else %}
+                    <div
+                    class="{% cycle "col-md-12 viewport" "col-sm-6 viewport-half" "col-sm-6 viewport-half" %} {{ post.category }}"
+
+                {% endif %}
+                    style="background-image: url({{ post.poster_image.url }});">
                     <div class="content">
                         <div class="copy-headings">
                             <div class="title">{{ post.title }}</div>
                             <div class="subtitle">{{ post.subtitle }}</div>
                             <hr class="title-line"/>
-                            <span class="btn-link">{{ post.category }}</span>
+                            <span class="btn-link watch-link">{{ post.category }}</span>
                         </div>
                     </div>
                     <div class="copy-drawer"></div>

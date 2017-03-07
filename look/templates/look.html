@@ -31,7 +31,15 @@
 
 
             <a href="{{ post.get_url }}">
-                <div class="{% cycle "col-md-12 viewport" "col-sm-6 viewport-half" "col-sm-6 viewport-half" %} {{ post.category }}"
+            {% if row_count == 2 and forloop.last == True %}
+                    <div class="col-md-12 viewport {{ post.category }}"
+
+                {% else %}
+                    <div
+                    class="{% cycle "col-md-12 viewport" "col-sm-6 viewport-half" "col-sm-6 viewport-half" %} {{ post.category }}"
+
+                {% endif %}
+
                      style="background-image: url({{ post.image.url }});">
 
 
