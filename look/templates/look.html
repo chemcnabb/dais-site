@@ -22,7 +22,7 @@
 
     {% for post in look.lookimage_set.all %}
 
-        {% if post %}
+        {% if post and post.image %}
             {% row_counter as row_count %}
             {% cycle '<div class="row ">' '<div class="row ">' '' %}
 
