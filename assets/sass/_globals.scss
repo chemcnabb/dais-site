@@ -73,7 +73,7 @@ html, body {
   z-index: 100;
   .copy-headings {
     position: absolute;
-    bottom: 53px;
+    bottom: -25px;
     min-width: 98%;
     .title {
       font-size: 24px;
@@ -126,7 +126,7 @@ html, body {
   top: 0; left: 0; bottom: 0; right: 0;
 }
 .viewport:hover > .copy-drawer, .viewport:focus > .copy-drawer, .viewport-half:hover > .copy-drawer, .viewport-half:focus > .copy-drawer {
-  bottom: 175px;
+  bottom: 285px;
   opacity: .4;
 }
 
