@@ -40,3 +40,6 @@ class LookImage(models.Model):
             return self.image.url.split("/")[-1].split(".")[0]
         else:
             return "image"
+
+    class Meta:
+        ordering = ['order']
