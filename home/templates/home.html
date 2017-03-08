@@ -24,6 +24,13 @@
                         <div class="copy-headings">
                             <div class="title">{{ post.title }}</div>
                             <div class="subtitle">{{ post.subtitle }}</div>
+                            <div class="pull-right watch-title-logo home-category">
+                                <div class="watch-logo-container pull-right">
+                                    <span class="watch-date">{{ post.date|date:"d.m.Y" }}</span>
+                                    <hr class="watch-date-line"/>
+                                    <img src="/static/imgs/icons/{% if post.category != "listen" %}{{ post.category }}-icon.svg{% else %}listen-icon.png{% endif %}"/>
+                                </div>
+                            </div>
                             <hr class="title-line"/>
                             <span class="btn-link watch-link">{{ post.category }}</span>
                         </div>
