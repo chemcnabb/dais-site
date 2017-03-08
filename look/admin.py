@@ -4,10 +4,12 @@ from look.models import LookPost, LookImage
 
 class LookImageInline(admin.TabularInline):
     model = LookImage
-    classes = ['collapse']
+    ordering = ("order",)
+    extra=1
 
 class LookAdmin(admin.ModelAdmin):
     save_as = True
     list_display = ('title',)
+
     inlines = [LookImageInline, ]
 admin.site.register(LookPost, LookAdmin)

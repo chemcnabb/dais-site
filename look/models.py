@@ -13,7 +13,6 @@ class LookPost(models.Model):
     subtitle = models.CharField(max_length=500,blank=True, null=True)
     credits = models.CharField(max_length=500,blank=True, null=True)
     description = HTMLField(blank=True, null=True)
-
     slug = models.SlugField(blank=True, null=True)
 
     def __unicode__(self):
@@ -34,4 +33,10 @@ class LookImage(models.Model):
     image = models.ImageField(blank=True, null=True)
     credits = models.CharField(max_length=500, blank=True, null=True)
     description = HTMLField(blank=True, null=True)
+    order = models.IntegerField(blank=True, null=True, default=0)
     post = models.ForeignKey("LookPost", null=True, blank=True)
+    def __unicode__(self):
+        if self.image:
+            return self.image.url.split("/")[-1].split(".")[0]
+        else:
+            return "image"
