@@ -24,6 +24,10 @@
                 {% autoescape off %}{{ member.description }}{% endautoescape %}
             </div>
         </div>
+            {% if forloop.counter == 3 %}
+                </div>
+                <div class="row">
+                {% endif %}
     {% endif %}
     {% endfor %}
 {#        <div class="col-sm-4 center-block no-top">#}

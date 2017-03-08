@@ -9,7 +9,7 @@ class TeamView(TemplateView):
     def get_context_data(self, **kwargs):
         context = super(TeamView, self).get_context_data(**kwargs)
 
-        context["team_members"] = TeamMember.objects.all()[:2]
+        context["team_members"] = TeamMember.objects.all()
 
 
         return context
