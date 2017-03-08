@@ -16,15 +16,21 @@
   font-size:12px;
 margin:0;
   .watch-copy-body{
-    border-right: 1px solid black;
+
     min-height: 250px;
+    max-width: 900px;
+    margin: 0 auto;
+    float: none;
+    padding: 0 !important;
   }
 }
 .watch-title{
-          margin: 10px 15px 35px 15px;
+    margin: 10px auto 35px auto;
     border-bottom: 1px solid black;
     position: relative;
-  padding-bottom: 15px;
+    max-width: 900px;
+    float: none;
+    padding-bottom: 15px;
   h1{
     font-size:24px;
     font-weight: bold;
@@ -45,8 +51,8 @@ margin:0;
 .watch-next-thumb{
       margin-left: 40px;
     margin-bottom: 40px;
-    width: 275px;
-    height: 179px;
+    width: 240px;
+    height: 156px;
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -62,4 +68,6 @@ margin:0;
 }
 .watch-title-content{
   padding-left:0;
+      max-width: 900px;
+
 }
