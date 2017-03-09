@@ -17,6 +17,26 @@ const HomeController = {
             });
 
         });
+
+        jQuery(".content").hover(function(){
+            let re = /(?:\.([^.]+))?$/;
+            let $img = jQuery(this).find(".watch-logo-container img");
+            let fileArr = $img.attr("src").split(".");
+            let fname = fileArr[0];
+            let ext = fileArr[1];
+            $img.attr("src", fname + "-white." + ext);
+
+        },function(){
+            let re = /(?:\.([^.]+))?$/;
+            let $img = jQuery(this).find(".watch-logo-container img");
+            let fileArr = $img.attr("src").split("-white.");
+            let fname = fileArr[0];
+            let ext = fileArr[1];
+            $img.attr("src", fname + "." + ext);
+
+        });
+
+
         jQuery(".viewport, .viewport-half").hover(function() {
       jQuery(this).animate({ boxShadow: "inset 0 0 0 1000px rgba(255, 255, 255, 0)" }, 1000);
     },function() {
