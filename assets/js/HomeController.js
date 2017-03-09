@@ -5,7 +5,7 @@
 const HomeController = {
     init: function () {
         let collection = ["watch", "look", "listen"];
-        jQuery(".filter-buttons").on("click", function(e){
+        jQuery(".home .filter-buttons").on("click", function(e){
             let button = e.target;
             jQuery.each(collection, function(index, value){
 
@@ -18,7 +18,7 @@ const HomeController = {
 
         });
 
-        jQuery(".content").hover(function(){
+        jQuery(".home .content").hover(function(){
             let re = /(?:\.([^.]+))?$/;
             let $img = jQuery(this).find(".watch-logo-container img");
             let fileArr = $img.attr("src").split(".");
@@ -37,7 +37,7 @@ const HomeController = {
         });
 
 
-        jQuery(".viewport, .viewport-half").hover(function() {
+        jQuery(".home .viewport, .home .viewport-half").hover(function() {
       jQuery(this).animate({ boxShadow: "inset 0 0 0 1000px rgba(255, 255, 255, 0)" }, 1000);
     },function() {
       jQuery(this).animate({ boxShadow: "inset 0 0 0 1000px rgba(255, 255, 255, .5)" }, 1000);
