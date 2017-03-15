@@ -5,7 +5,7 @@
     {% if cal_error %}
         {{ cal_error }}
     {% endif %}
-{% upcoming_events %}
+
 {#    <h1>Event Calendar</h1>#}
 <div class="row">
 <a id="toggleCalendar" class="btn btn-default">show calendar</a>
@@ -15,7 +15,7 @@
     </div>
 
 
-
+{% upcoming_events %}
     {% if show_events %}
         <div class="row">
             <div class="col-md-12">
