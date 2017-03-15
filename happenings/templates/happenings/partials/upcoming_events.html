@@ -8,7 +8,7 @@
             <div class="row"
                      style="margin-right:0;background:{{ colors.0 }}; color:{{ colors.1 }};border-bottom:1px solid #efefef">
                     <div class="col-sm-6">
-                        <div class="event-poster" style="background-image:url('{{ event.poster.url }}')"></div>
+                        <div class="event-poster" style="background-image:url('{% if event.poster %}{{ event.poster.url }}{% endif %}')"></div>
                     </div>
                     <div class="col-sm-6 event-block">
                         <div class="event-title">
