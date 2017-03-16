@@ -40,15 +40,7 @@
             <li><a href="/events">Calendar</a></li>
             <li><a href="/about">About</a></li>
 {#            <li><a href="/team">Team</a></li>#}
-            <li class="middle-section">
-                <div class="page-filters">
-                    <div class="btn-group">
-                        <button type="button" id="watch" class="btn btn-primary filter-buttons">Watch</button>
-                        <button type="button" id="look" class="btn btn-primary filter-buttons">Look</button>
-                        <button type="button" id="listen" class="btn btn-primary filter-buttons">Listen</button>
-                    </div>
-                </div>
-            </li>
+            {% block nav-filters %}{% endblock %}
             <li class="pull-right">
                 <div class="page-filters--right">
                     <div class="btn-group">

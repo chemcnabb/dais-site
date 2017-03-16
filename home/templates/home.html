@@ -1,6 +1,15 @@
 {% extends "base.html" %}
 {% load site_filters %}
 {% block page-class %}home{% endblock %}
+{% block nav-filters %}<li class="middle-section">
+                <div class="page-filters">
+                    <div class="btn-group">
+                        <button type="button" id="watch" class="btn btn-primary filter-buttons">Watch</button>
+                        <button type="button" id="look" class="btn btn-primary filter-buttons">Look</button>
+                        <button type="button" id="listen" class="btn btn-primary filter-buttons">Listen</button>
+                    </div>
+                </div>
+            </li>{% endblock %}
 {% block content %}
 
     {% for post in post_list %}
