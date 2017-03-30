@@ -19,6 +19,14 @@ html, body {
   max-width:900px;
   margin:0 auto;
 }
+
+.post-list-display{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    margin-left: -15px;
+    margin-right: -15px;
+}
 .dais-logo-wrapper{
   position: absolute;
     text-align: center;
@@ -133,11 +141,20 @@ html, body {
   bottom: 285px;
   opacity: .4;
 }
-
+ul.post-list-display li .viewport.full{
+  width: 100vw !important;
+  max-width: 100%;
+}
+ul.post-list-display li .viewport.half {
+  width: 50vw;
+  float:left;
+  max-width: 50%;
+}
 .viewport {
   @include viewport();
-  width: 100vw;
-  max-width: 100%;
+  //width: 100vw;
+
+  //min-width:50%;
 }
 
 .home .viewport {
@@ -183,7 +200,7 @@ html, body {
     margin-left: -15px;
     background-color: #efefef;
     overflow: hidden;
-    /* width: 100%; */
+    min-width: 100%;
 }
 
 footer{

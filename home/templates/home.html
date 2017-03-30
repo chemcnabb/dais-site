@@ -11,24 +11,50 @@
                 </div>
             </li>{% endblock %}
 {% block content %}
-
+    <div id="post-list-display">
+<ul class="post-list-display">
     {% for post in post_list %}
         {% row_counter as row_count %}
 
         {% if post %}
 
-            {% cycle '<div class="row ">' '<div class="row ">' '' %}
+{#            {% cycle '<div class="row ">' '<div class="row ">' '' %}#}
+{##}
+{#            <a href="{{ post.get_url }}">#}
+{#                {% if row_count == 2 and forloop.last == True %}#}
+{#                    <div class="col-md-12 viewport {{ post.category }}"#}
+{##}
+{#                {% else %}#}
+{#                    <div#}
+{#                    class="{% cycle "col-md-12 viewport" "col-sm-6 viewport-half" "col-sm-6 viewport-half" %} {{ post.category }}"#}
+{##}
+{#                {% endif %}#}
+{#                    style="background-image: url({{ post.poster_image.url }});">#}
+{#                    <div class="content">#}
+{#                        <div class="copy-headings">#}
+{#                            <div class="title">{{ post.title }}</div>#}
+{#                            <div class="subtitle">{{ post.subtitle }}</div>#}
+{#                            <div class="pull-right watch-title-logo home-category">#}
+{#                                <div class="watch-logo-container pull-right">#}
+{#                                    <span class="watch-date">{{ post.date|date:"d.m.Y" }}</span>#}
+{#                                    <hr class="watch-date-line"/>#}
+{#                                    <img src="/static/imgs/icons/{{ post.category }}-icon.svg"/>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                            <hr class="title-line"/>#}
+{#                            <span class="btn-link watch-link">{{ post.category }}</span>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                    <div class="copy-drawer"></div>#}
+{#                </div>#}
+{#            </a>#}
+{##}
+{#            {% cycle "</div>" "" "</div>" %}#}
 
-            <a href="{{ post.get_url }}">
-                {% if row_count == 2 and forloop.last == True %}
-                    <div class="col-md-12 viewport {{ post.category }}"
+            <li class="view-toggle {{ post.category }}">
+                        <a href="{{ post.get_url }}">
 
-                {% else %}
-                    <div
-                    class="{% cycle "col-md-12 viewport" "col-sm-6 viewport-half" "col-sm-6 viewport-half" %} {{ post.category }}"
-
-                {% endif %}
-                    style="background-image: url({{ post.poster_image.url }});">
+                    <div class="col-md-12 viewport " style="background-image: url({{ post.poster_image.url }});">
                     <div class="content">
                         <div class="copy-headings">
                             <div class="title">{{ post.title }}</div>
@@ -47,19 +73,18 @@
                     <div class="copy-drawer"></div>
                 </div>
             </a>
-
-            {% cycle "</div>" "" "</div>" %}
+            </li>
 
         {% endif %}
-        {% ifequal row_count 2 %}
-            {% if forloop.last %}
-                </div>
-            {% endif %}
-        {% endifequal %}
+{#        {% ifequal row_count 2 %}#}
+{#            {% if forloop.last %}#}
+{#                </div>#}
+{#            {% endif %}#}
+{#        {% endifequal %}#}
 
     {% endfor %}
-
-
+</ul>
+</div>
 
 
 

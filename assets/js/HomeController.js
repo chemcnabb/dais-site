@@ -5,20 +5,71 @@
 const HomeController = {
     init: function () {
         let collection = ["watch", "look", "listen"];
-        jQuery(".home .filter-buttons").on("click", function(e){
-            let button = e.target;
-            jQuery.each(collection, function(index, value){
 
-                if(value != button.id){
-                    jQuery("." + value).hide(1000);
-                }else{
-                    jQuery("." + value).show(1000);
+        let count = 0;
+        jQuery(".post-list-display").children().each(function () {
+            count++;
+            if (count === 4) {
+                count = 1;
+            }
+            if (count === 1) {
+                jQuery(this).find(".viewport").addClass("full");
+            } else if (count === 2 || count === 3) {
+                jQuery(this).find(".viewport").addClass("half");
+            }
+            console.log(count);
+        });
+
+
+        jQuery(".home .filter-buttons").on("click", function (e) {
+            let button = e.target;
+            jQuery.each(collection, function (index, value) {
+                jQuery(`.${value}`).hide(800);
+            });
+
+            jQuery.each(collection, function (index, value) {
+                if (value === button.id) {
+                    jQuery(`.${value}`).addClass("will-show");
                 }
+
+            });
+            count = 0;
+            jQuery(".post-list-display ").children(".will-show").each(function () {
+
+
+
+
+                    count++;
+                    if (count === 4) {
+                        count = 1;
+                    }
+                    if (count === 1) {
+                        jQuery(this).find(".viewport").addClass("full");
+                        jQuery(this).find(".viewport").removeClass("half");
+                    } else if ((count === 2 || count === 3) && !(jQuery(this).is(':last-child'))) {
+                        jQuery(this).find(".viewport").addClass("half");
+                        jQuery(this).find(".viewport").removeClass("full");
+                    }else if((count === 2 || count === 3) && jQuery(this).is(':last-child')){
+                        console.log(jQuery(this).is(':last-child'), jQuery(this));
+                        jQuery(this).find(".viewport").addClass("full");
+                        jQuery(this).find(".viewport").removeClass("half");
+                    }
+                    jQuery(this).removeClass("will-show");
+
+            });
+
+
+            jQuery.each(collection, function (index, value) {
+                if (value === button.id) {
+
+                    jQuery(`.${value}`).show(800);
+                }
+
             });
 
         });
 
-        jQuery(".home .content").hover(function(){
+        jQuery(".home .content").hover(function () {
             let re = /(?:\.([^.]+))?$/;
             let $img = jQuery(this).find(".watch-logo-container img");
             let fileArr = $img.attr("src").split(".");
@@ -26,7 +77,7 @@ const HomeController = {
             let ext = fileArr[1];
             $img.attr("src", fname + "-white." + ext);
 
-        },function(){
+        }, function () {
             let re = /(?:\.([^.]+))?$/;
             let $img = jQuery(this).find(".watch-logo-container img");
             let fileArr = $img.attr("src").split("-white.");
@@ -37,11 +88,11 @@ const HomeController = {
         });
 
 
-        jQuery(".home .viewport, .home .viewport-half").hover(function() {
-      jQuery(this).animate({ boxShadow: "inset 0 0 0 1000px rgba(255, 255, 255, 0)" }, 1000);
-    },function() {
-      jQuery(this).animate({ boxShadow: "inset 0 0 0 1000px rgba(255, 255, 255, .5)" }, 1000);
-    });
+        jQuery(".home .viewport, .home .viewport-half").hover(function () {
+            jQuery(this).animate({boxShadow: "inset 0 0 0 1000px rgba(255, 255, 255, 0)"}, 1000);
+        }, function () {
+            jQuery(this).animate({boxShadow: "inset 0 0 0 1000px rgba(255, 255, 255, .5)"}, 1000);
+        });
 
     },
 };
