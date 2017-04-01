@@ -14,10 +14,13 @@ const HomeController = {
             }
             if (count === 1) {
                 jQuery(this).find(".viewport").addClass("full");
-            } else if (count === 2 || count === 3) {
+            } else if ((count === 2 || count === 3) && !jQuery(this).is(':last-child')) {
                 jQuery(this).find(".viewport").addClass("half");
-            }
-            console.log(count);
+            } else if ((count === 2 || count === 3) && jQuery(this).is(':last-child')) {
+                    jQuery(this).find(".viewport").addClass("full");
+                    jQuery(this).find(".viewport").removeClass("half");
+                }
+
         });
 
 
@@ -33,22 +36,21 @@ const HomeController = {
                 }
 
             });
-            count = 0;
-            jQuery(".post-list-display ").children(".will-show").each(function () {
-
+            let count = 0;
+            jQuery(".post-list-display ").children("li.will-show").each(function () {
 
                 count++;
+
                 if (count === 4) {
                     count = 1;
                 }
                 if (count === 1) {
                     jQuery(this).find(".viewport").addClass("full");
                     jQuery(this).find(".viewport").removeClass("half");
-                } else if ((count === 2 || count === 3) && !(jQuery(this).is(':last-child'))) {
+                } else if ((count === 2 || count === 3) && (jQuery(".post-list-display ").children("li.will-show").length > 1)) {
                     jQuery(this).find(".viewport").addClass("half");
                     jQuery(this).find(".viewport").removeClass("full");
-                } else if ((count === 2 || count === 3) && jQuery(this).is(':last-child')) {
-                    console.log(jQuery(this).is(':last-child'), jQuery(this));
+                } else if ((count === 2 || count === 3) && (jQuery(".post-list-display ").children("li.will-show").length === 1)) {
                     jQuery(this).find(".viewport").addClass("full");
                     jQuery(this).find(".viewport").removeClass("half");
                 }
