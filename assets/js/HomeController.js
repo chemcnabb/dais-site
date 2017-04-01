@@ -37,24 +37,22 @@ const HomeController = {
             jQuery(".post-list-display ").children(".will-show").each(function () {
 
 
-
-
-                    count++;
-                    if (count === 4) {
-                        count = 1;
-                    }
-                    if (count === 1) {
-                        jQuery(this).find(".viewport").addClass("full");
-                        jQuery(this).find(".viewport").removeClass("half");
-                    } else if ((count === 2 || count === 3) && !(jQuery(this).is(':last-child'))) {
-                        jQuery(this).find(".viewport").addClass("half");
-                        jQuery(this).find(".viewport").removeClass("full");
-                    }else if((count === 2 || count === 3) && jQuery(this).is(':last-child')){
-                        console.log(jQuery(this).is(':last-child'), jQuery(this));
-                        jQuery(this).find(".viewport").addClass("full");
-                        jQuery(this).find(".viewport").removeClass("half");
-                    }
-                    jQuery(this).removeClass("will-show");
+                count++;
+                if (count === 4) {
+                    count = 1;
+                }
+                if (count === 1) {
+                    jQuery(this).find(".viewport").addClass("full");
+                    jQuery(this).find(".viewport").removeClass("half");
+                } else if ((count === 2 || count === 3) && !(jQuery(this).is(':last-child'))) {
+                    jQuery(this).find(".viewport").addClass("half");
+                    jQuery(this).find(".viewport").removeClass("full");
+                } else if ((count === 2 || count === 3) && jQuery(this).is(':last-child')) {
+                    console.log(jQuery(this).is(':last-child'), jQuery(this));
+                    jQuery(this).find(".viewport").addClass("full");
+                    jQuery(this).find(".viewport").removeClass("half");
+                }
+                jQuery(this).removeClass("will-show");
 
             });
 
