@@ -13,11 +13,11 @@
   margin: 0;
   padding: 0;
   text-align: center;
-  font-size: 10px;
+  font-size: 12px;
   text-transform: uppercase;
   background-color: #efefef;
 
-  height: 31px;
+  height: 60px;
   width: 100%;
   z-index: 100;
   li {
@@ -47,6 +47,24 @@
     /* float: right; */
     text-align: center;
 }
+.page-filters {
+  .btn-primary{
+    text-decoration: underline;
+  }
+}
+
+.social-nav{
+  width: 25px;
+
+    position: relative !important;
+}
+
+
+.filter-buttons img{
+  width:25px;
+  color:#9e9e9e;
+}
+
 .page-filters, .page-filters--right {
   display:inline-block;
 
@@ -58,15 +76,21 @@
     background-color: transparent;
     border-color: transparent;
     color: #9e9e9e;
-    font-size: 10px;
+    font-size: 12px;
+
     font-weight: bold;
     text-transform: uppercase;
   }
+
 
 }
 
 .navbar-collapse.in, .navbar-collapse.collapsing {
   overflow-x: hidden;
+}
+
+.navbar-nav > li > a, .page-filters--right .btn-primary{
+  line-height:60px !important;
 }
 
 //// Small devices (landscape phones, 576px and up)
