@@ -41,6 +41,7 @@
 .middle-section{
       position: relative;
     margin: 0 auto;
+  margin-left:-60px;
     width: 200px;
     float: none !important;
     /* right: 0%; */
@@ -91,6 +92,7 @@
 
 .navbar-nav > li > a, .page-filters--right .btn-primary{
   line-height:60px !important;
+  height:59px;
 }
 
 //// Small devices (landscape phones, 576px and up)
