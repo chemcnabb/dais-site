@@ -12788,13 +12788,15 @@ var DaisController =
 	            }
 	        });
 	
-	        jQuery(".home .filter-buttons").on("click", function (e) {
-	            let button = e.target;
+	        jQuery(".home a.filter-buttons").on("click", function (e) {
+	            let button = this;
+	
 	            jQuery.each(collection, function (index, value) {
 	                jQuery(`.${ value }`).hide(800);
 	            });
 	
 	            jQuery.each(collection, function (index, value) {
+	
 	                if (value === button.id) {
 	                    jQuery(`.${ value }`).addClass("will-show");
 	                }
@@ -12906,4 +12908,4 @@ var DaisController =
 
 /***/ }
 /******/ ]);
-//# sourceMappingURL=main-6ba15d0a8828379ec6f2.js.map
+//# sourceMappingURL=main-d35fe00d8472f4f9e660.js.map

@@ -6201,6 +6201,11 @@ html, body {
   max-width: 900px;
   margin: 0 auto; }
 
+.page-body-content {
+  top: 90px;
+  position: relative;
+  margin-bottom: 65px; }
+
 .post-list-display {
   margin: 0;
   padding: 0;
@@ -6254,6 +6259,7 @@ html, body {
 .middle-section {
   position: relative;
   margin: 0 auto;
+  margin-left: -60px;
   width: 200px;
   float: none !important;
   /* right: 0%; */
@@ -6287,10 +6293,12 @@ html, body {
   overflow-x: hidden; }
 
 .navbar-nav > li > a, .page-filters--right .btn-primary {
-  line-height: 60px !important; }
+  line-height: 60px !important;
+  height: 59px; }
 
 .header-wrap {
   width: 100%;
+  top: 100px;
   position: relative;
   min-height: 155px; }
 
@@ -6486,4 +6494,4 @@ footer {
   .viewport .content {
     padding-top: 0.1px; } }
 
-/*# sourceMappingURL=main-f7b7c72b14525cbda9f9.css.map*/
+/*# sourceMappingURL=main-d35fe00d8472f4f9e660.css.map*/

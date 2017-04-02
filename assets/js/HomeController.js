@@ -17,20 +17,21 @@ const HomeController = {
             } else if ((count === 2 || count === 3) && !jQuery(this).is(':last-child')) {
                 jQuery(this).find(".viewport").addClass("half");
             } else if ((count === 2 || count === 3) && jQuery(this).is(':last-child')) {
-                    jQuery(this).find(".viewport").addClass("full");
-                    jQuery(this).find(".viewport").removeClass("half");
-                }
-
+                jQuery(this).find(".viewport").addClass("full");
+                jQuery(this).find(".viewport").removeClass("half");
+            }
         });
 
+        jQuery(".home a.filter-buttons").on("click", function (e) {
+            let button = this;
 
-        jQuery(".home .filter-buttons").on("click", function (e) {
-            let button = e.target;
+
             jQuery.each(collection, function (index, value) {
                 jQuery(`.${value}`).hide(800);
             });
 
             jQuery.each(collection, function (index, value) {
+
                 if (value === button.id) {
                     jQuery(`.${value}`).addClass("will-show");
                 }
