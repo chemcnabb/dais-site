@@ -85,6 +85,7 @@ top:19px;
       text-transform: capitalize;
       transition: all 0.5s ease-in-out;
       min-height:18px;
+   max-width:63%;
     }
 .content {
   //transition: all 0.3s ease-in-out;
@@ -102,7 +103,7 @@ top:19px;
       font-weight: bold;
       text-transform: uppercase;
       transition: all 0.5s ease-in-out;
-
+      max-width:63%;
     }
 
     .title-line {
@@ -156,11 +157,21 @@ ul.post-list-display li .viewport.full{
   width: 100vw !important;
   max-width: 100%;
 }
-ul.post-list-display li .viewport.half {
+
+@media (max-width: 767px) {
+  ul.post-list-display li .viewport.half {
+  width: 100vw !important;
+  max-width: 100%;
+}
+}
+@media (min-width: 768px) {
+  ul.post-list-display li .viewport.half {
   width: 50vw;
   float:left;
   max-width: 50%;
 }
+}
+
 .viewport {
   @include viewport();
   //width: 100vw;
