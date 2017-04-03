@@ -36,7 +36,13 @@ html, body {
   position: absolute;
     text-align: center;
     width: 100%;
+
 }
+.dais-logo-wrapper > a{
+  position:relative;
+  left:50px;
+}
+
 .dais-logo{
   width:100px;
   height:72px;
@@ -45,7 +51,7 @@ html, body {
 @import 'navigation';
 .header-wrap{
       width: 100%;
-top:100px;
+top:19px;
     position: relative;
     min-height: 155px;
 }

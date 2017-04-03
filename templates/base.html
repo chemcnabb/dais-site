@@ -21,6 +21,9 @@
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="dais-logo-wrapper">
         <a href="/"><img class="dais-logo" src="/static/imgs/dais_logo.svg"/></a>
+        <div class="pull-right">
+            <a href="/"><img class="" src="/static/imgs/icons/IHEARTRADIO-BUTTON.png"/></a>
+        </div>
     </div>
     <div class="navbar-header">
 
@@ -33,7 +36,7 @@
             </button>
         </div>
     </div>
-    <div class="navbar-collapse collapse in">
+    <div class="navbar-collapse collapse {% block togglenav %}{% endblock %}">
         <ul class="nav navbar-nav subnav">
             <li><a href="http://www.iheartradio.ca/dais" target="_blank">Radio</a></li>
 {#            <li><a href="/music">Music</a></li>#}
