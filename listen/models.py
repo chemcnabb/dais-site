@@ -16,6 +16,7 @@ class ListenPost(models.Model):
     soundcloud_embed = models.CharField(max_length=500, blank=True, null=True)
     description = HTMLField(blank=True, null=True)
     slug = models.SlugField(blank=True, null=True)
+    order = models.IntegerField(default=0)
     home = models.ForeignKey(HomePage, default=1)
 
     def __unicode__(self):

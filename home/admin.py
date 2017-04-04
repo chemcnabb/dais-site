@@ -8,17 +8,20 @@ from look.models import LookPost
 class WatchInline(admin.TabularInline):
     model = WatchPost
     exclude = ['date','subtitle','credits', 'detail','vimeo_id','description','slug', 'poster_image']
+    ordering = ("order","date",)
     max_num = 0
 
 class LookInline(admin.TabularInline):
     model = LookPost
     exclude = ['date', 'subtitle', 'credits', 'detail', 'vimeo_id', 'description', 'slug', 'poster_image']
+    ordering = ("order", "date",)
     max_num = 0
 
 
 class ListenInline(admin.TabularInline):
     model = ListenPost
     exclude = ['date', 'subtitle', 'credits', 'detail', 'soundcloud_embed', 'description', 'slug', 'poster_image']
+    ordering = ("order", "date",)
     max_num = 0
 
 class HomeAdmin(MergedInlineAdmin):
