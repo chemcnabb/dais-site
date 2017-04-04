@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 "storages",
 'django.contrib.humanize',
 'tinymce',
+'merged_inlines',
     'webpack_loader',
     'happenings',
     'home',

@@ -2,6 +2,7 @@ from __future__ import unicode_literals
 from tinymce.models import HTMLField
 from django.db import models
 from django.template.defaultfilters import slugify
+from home.models import HomePage
 
 # Create your models here.
 class WatchPost(models.Model):
@@ -14,7 +15,7 @@ class WatchPost(models.Model):
     vimeo_id = models.CharField(max_length=500, blank=True, null=True)
     description = HTMLField(blank=True, null=True)
     slug = models.SlugField(blank=True, null=True)
-
+    home = models.ForeignKey(HomePage, default=1)
     def __unicode__(self):
         return self.title
 
