@@ -2,8 +2,8 @@
 {% load humanize %}
 <div id="event-list">
 
-{#    {% for day, list in events.reverse %}#}
-        {% for event in events %}
+    {% for day, list in events.reverse %}
+        {% for event in list %}
             {% with colors=event.get_colors %}
                 <div class="row"
                      style="margin-right:0;background:{{ colors.0 }}; color:{{ colors.1 }};border-bottom:1px solid #efefef">
@@ -39,7 +39,7 @@
 
 
             {% endwith %}
-{#        {% endfor %}#}
+        {% endfor %}
     {% empty %}
         Oops.. No events!
     {% endfor %}

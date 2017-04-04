@@ -22,10 +22,7 @@
                             <div class="widget-month">
 
 
-                                {% weekday current.year current.month_num day full=True %}
-                                {{ current.month }}
-                                {{ day|ordinal }},
-                                {{ current.year }}
+                                {{ event.start_date }} - {{ event.end_date }}
 
                             </div>
                         </div>
