@@ -16,8 +16,8 @@
         <div class="col-md-10 watch-title-content" style="">
 
             <h1>{{ artist.artist_name }}</h1>
-            <p class="subtitle">{{ artist.subtitle }}</p>
-            <p class="subtitle">{% autoescape off %}{{ artist.soundcloud_embed }}{% endautoescape %}</p>
+            <p class="subtitle"></p>
+            <p class="subtitle"></p>
 
 
 
@@ -35,6 +35,12 @@
     <div class="row watch-copy">
         <div class="col-sm-12 watch-copy-body" style="">
             {% autoescape off %}{{ artist.bio }}{% endautoescape %}
+        </div>
+    </div>
+    <br>
+<div class="row watch-copy">
+        <div class="col-sm-12 watch-copy-body" style="">
+            {% autoescape off %}{{ artist.soundcloud_embed }}{% endautoescape %}
         </div>
     </div>
 
