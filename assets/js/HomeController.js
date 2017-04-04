@@ -15,8 +15,12 @@ const HomeController = {
             if (count === 1) {
                 jQuery(this).find(".viewport").addClass("full");
             } else if ((count === 2 || count === 3) && !jQuery(this).is(':last-child')) {
+                jQuery(this).find(".viewport").removeClass("full");
                 jQuery(this).find(".viewport").addClass("half");
-            } else if ((count === 2 || count === 3) && jQuery(this).is(':last-child')) {
+            } else if ((count === 3) && jQuery(this).is(':last-child')) {
+                jQuery(this).find(".viewport").removeClass("full");
+                jQuery(this).find(".viewport").addClass("half");
+            } else if ((count === 2) && jQuery(this).is(':last-child')) {
                 jQuery(this).find(".viewport").addClass("full");
                 jQuery(this).find(".viewport").removeClass("half");
             }
