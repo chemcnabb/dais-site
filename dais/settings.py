@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'listen',
     'radio',
     'music',
+    'press',
     'about',
     'team',
 ]
