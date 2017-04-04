@@ -2,9 +2,37 @@
 {% load staticfiles i18n %}
 
 {% block content %}
-        <h1>{{ event.title }}</h1>
-        <p>{{ event.description }}</p>
 
+
+
+    <div class="row  row-full-override">
+        <div class="col-md-12 viewport" style="background-image: url({% if event.poster %}{{ event.poster.url }}{% endif %});">
+
+        </div>
+
+    </div>
+
+  <div class="row watch-title">
+        <div class="col-md-10 watch-title-content" style="">
+
+            <h1>{{ event.title }}</h1>
+
+
+
+        </div>
+        <div class="col-md-2 pull-right watch-title-logo">
+            <div class="watch-logo-container pull-right">
+                <span class="watch-date">{{ event.start_date }}</span>
+                <hr class="watch-date-line"/>
+                <span class="watch-date">{{ event.end_date }}</span>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row watch-copy">
+        <div class="col-sm-12 watch-copy-body" style="">
+            {% autoescape off %}{{ listen.description }}{% endautoescape %}
         {% if event.start_end_diff %}
             <b>{% blocktrans with event_duration_days=event.start_end_diff %}This is a {{ event_duration_days }} day event.{% endblocktrans %}</b><br>
         {% endif %}
@@ -84,5 +112,15 @@
                 {% endfor %}
             </ul>
         {% endif %}
+        </div>
+    </div>
+
+
+
+
+{#        <h1>{{ event.title }}</h1>#}
+{#        <p>{{ event.description }}</p>#}
+
+
 
 {% endblock content %}
