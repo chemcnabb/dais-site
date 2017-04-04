@@ -44,7 +44,7 @@ class MergedInlineAdmin(admin.ModelAdmin):
                 self.merged_inline_order
             ) if getattr(
                 x[0].form.instance,
-                self.merged_inline_order) is not None else end, reverse=True)
+                self.merged_inline_order) is not None else end, reverse=False)
 
         # Sort the fields based in merged_inline_order, if given
         if self.merged_field_order is not None:
