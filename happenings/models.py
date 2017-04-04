@@ -103,7 +103,7 @@ class Event(models.Model):
 
     def poster_thumbnail(self):
         if self.poster:
-            return u'<img width="100" src="/static/%s" />' % self.poster.url
+            return u'<img width="100" src="%s" />' % self.poster.url
         else:
             return ""
 
