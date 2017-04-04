@@ -266,10 +266,10 @@ class Event(models.Model):
                 raise ValidationError(
                     "The event's start date must be before the end date."
                 )
-            elif (self.l_end_date - self.l_start_date) > datetime.timedelta(7):
-                raise ValidationError(
-                    "Only events spanning 7 days or less are supported."
-                )
+            # elif (self.l_end_date - self.l_start_date) > datetime.timedelta(7):
+            #     raise ValidationError(
+            #         "Only events spanning 7 days or less are supported."
+            #     )
 
     def clean_repeat(self):
         if self.repeats('NEVER') and self.end_repeat:
