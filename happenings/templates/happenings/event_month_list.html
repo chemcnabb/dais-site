@@ -3,6 +3,13 @@
 {% block content %}
 
 
+{#<div class="row  row-full-override">#}
+{#        <div class="col-md-12 viewport vimeo-img" style="background-image: url({{ watch.poster_image.url }});">#}
+{##}
+{#            <div class="play-btn"></div>#}
+{#        </div>#}
+{##}
+{#    </div>#}
 
 
 
@@ -20,11 +27,10 @@
 
 
 
-
-<div class="events">
-    {% if cal_error %}
-        {{ cal_error }}
-    {% endif %}
+{#<div class="events">#}
+{#    {% if cal_error %}#}
+{#        {{ cal_error }}#}
+{#    {% endif %}#}
 
 {#    <h1>Event Calendar</h1>#}
 {#<div class="row">#}
@@ -57,5 +63,5 @@
             </div>
         </div>
     {% endif %}
-</div>
+{#</div>#}
 {% endblock content %}
