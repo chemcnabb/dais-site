@@ -24,6 +24,7 @@ from listen.views import ListenView
 from django.conf.urls.static import static
 from radio.views import RadioView
 from music.views import MusicView, ArtistView
+from press.views import PressView
 from about.views import AboutView
 from team.views import TeamView
 from django.views.generic import TemplateView
@@ -38,6 +39,7 @@ url(r'^tinymce/', include('tinymce.urls')),
     url(r'^artist/(?P<music_slug>[\w-]+)/$', ArtistView.as_view(), name="artist"),
     url(r'^radio/$', RadioView.as_view(), name="radio"),
     url(r'^music/$', MusicView.as_view(), name="music"),
+    url(r'^press/$', PressView.as_view(), name="press"),
     url(r'^events/', include('happenings.urls', namespace='calendar'), name="events"),
     url(r'^design/$', TemplateView.as_view(template_name='design.html')),
 # url(r'^calendar/', include('happenings.urls', namespace='calendar')),
