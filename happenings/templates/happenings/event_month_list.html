@@ -49,7 +49,10 @@
 
 {% upcoming_events %}
 
-    <div class="container-fluid header-wrap show-header no-gutters" style="margin-left: -15px;width: 106% !important;">
+
+
+    {% if not show_events %}
+        <div class="container-fluid header-wrap show-header no-gutters" style="margin-left: -15px;width: 106% !important;">
     <div class="page-header text-center">
         <h1>ALL EVENTS FOR {{ month_and_year }}</h1>
         <hr class="hr-bold"/>
@@ -57,7 +60,9 @@
     </div>
 </div>
 
-    {% if show_events %}
+
+
+        
         <div class="row">
             <div class="col-md-12">
 {#                <h1 id="month-list-events-title">#}
