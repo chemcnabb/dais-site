@@ -17,8 +17,8 @@
 
             <h1>{{ artist.artist_name }}</h1>
             <p class="subtitle">{{ artist.subtitle }}</p>
-            <p class="subtitle">{{ artist.credits }}</p>
-            <p class="subtitle">{{ artist.detail }}</p>
+            <p class="subtitle">{% autoescape off %}{{ artist.soundcloud_embed }}{% endautoescape %}</p>
+
 
 
         </div>
@@ -37,11 +37,7 @@
             {% autoescape off %}{{ artist.bio }}{% endautoescape %}
         </div>
     </div>
-    <div class="row watch-copy">
-        <div class="col-sm-12 watch-copy-body" style="">
-            {% autoescape off %}{{ artist.soundcloud_embed }}{% endautoescape %}
-        </div>
-    </div>
+
 
 {% endblock content %}
 
