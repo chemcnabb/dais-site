@@ -2,6 +2,46 @@
 {% block page-class %}home{% endblock %}
 {% block page-title %}music{% endblock %}
 {% block no-header %}show-header{% endblock %}
-{% block content %}
 
+
+
+{% block content %}
+   <div id="post-list-display">
+<ul class="post-list-display">
+    {% for post in post_list %}
+
+
+        {% if post %}
+
+
+            <li class="view-toggle {{ post.category }}">
+                        <a href="{{ post.get_url }}">
+
+                    <div class="col-md-12 viewport " style="background-image: url({{ post.poster_image.url }});">
+                    <div class="content">
+                        <div class="copy-headings">
+                            <div class="title">{{ post.title }}</div>
+                            <div class="subtitle">{{ post.subtitle }}</div>
+                            <div class="pull-right watch-title-logo home-category">
+                                <div class="watch-logo-container pull-right">
+                                    <span class="watch-date">{{ post.date|date:"d.m.Y" }}</span>
+                                    <hr class="watch-date-line"/>
+{#                                    <img src="/static/imgs/icons/{{ post.category }}-icon.svg"/>#}
+                                </div>
+                            </div>
+                            <hr class="title-line"/>
+                            <span class="btn-link watch-link">{{ post.category }}</span>
+                        </div>
+                    </div>
+                    <div class="copy-drawer"></div>
+                </div>
+            </a>
+            </li>
+
+        {% endif %}
+
+
+    {% endfor %}
+</ul>
+</div>
 {% endblock content %}
