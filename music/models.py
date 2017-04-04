@@ -22,7 +22,7 @@ class MusicPost(models.Model):
         return "music"
 
     def get_url(self):
-        return "/music/%s" % self.slug
+        return "/artist/%s" % self.slug
 
     def save(self, *args, **kwargs):
         if not self.slug:
