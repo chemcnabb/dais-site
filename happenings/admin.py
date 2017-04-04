@@ -20,21 +20,21 @@ class EventAdmin(admin.ModelAdmin):
             'classes': ('collapse',),
             'fields': ('location',)
         }),
-        ('Category', {
-            'classes': ('collapse',),
-            'fields': ('categories',)
-        }),
-        ('Tag', {
-            'classes': ('collapse',),
-            'fields': ('tags',)
-        }),
-        ('Color', {
-            'classes': ('collapse',),
-            'fields': (
-                ('background_color', 'background_color_custom'),
-                ('font_color', 'font_color_custom'),
-            )
-        }),
+        # ('Category', {
+        #     'classes': ('collapse',),
+        #     'fields': ('categories',)
+        # }),
+        # ('Tag', {
+        #     'classes': ('collapse',),
+        #     'fields': ('tags',)
+        # }),
+        # ('Color', {
+        #     'classes': ('collapse',),
+        #     'fields': (
+        #         ('background_color', 'background_color_custom'),
+        #         ('font_color', 'font_color_custom'),
+        #     )
+        # }),
     )
 
     list_display = ('poster_thumbnail', 'title', 'start_date', 'end_date', 'repeat', 'end_repeat')
