@@ -1,7 +1,114 @@
 {% load weekday %}
 {% load humanize %}
 {% if upcoming_events %}
+
+
+
+    <div id="post-list-display">
+<ul class="post-list-display">
+
+
+{% for d, event in upcoming_events %}
+
+
+    <li class="view-toggle">
+                        <a href="{{ event.get_absolute_url }}">
+
+                    <div class="col-md-12 viewport " style="background-image: url({% if event.poster %}{{ event.poster.url }}{% endif %});">
+                    <div class="content">
+                        <div class="copy-headings">
+                            <div class="title">{{ event.title }}</div>
+                            <div class="subtitle">{{ post.subtitle }}</div>
+                            <div class="pull-right watch-title-logo home-category">
+                                <div class="watch-logo-container pull-right">
+                                    <span class="watch-date">{{ event.start_date }} - {{ event.end_date }}</span>
+                                    <hr class="watch-date-line"/>
+                                    <img src="/static/imgs/icons/event-icon.svg"/>
+                                </div>
+                            </div>
+                            <hr class="title-line"/>
+                            <span class="btn-link watch-link">go to event</span>
+                        </div>
+                    </div>
+                    <div class="copy-drawer"></div>
+                </div>
+            </a>
+            </li>
+
+
+
+
+
+
+
+
+
+
+{#            <div class="row"#}
+{#                     style="margin-right:0;background:{{ colors.0 }}; color:{{ colors.1 }};border-bottom:1px solid #efefef">#}
+{#                    <div class="col-sm-6">#}
+{#                        <div class="event-poster" style="background-image:url('{% if event.poster %}{{ event.poster.url }}{% endif %}')"></div>#}
+{#                    </div>#}
+{#                    <div class="col-sm-6 event-block">#}
+{#                        <div class="event-title">#}
+{#                            <a href="{{ event.get_absolute_url }}">#}
+{#                                <h5>{{ event.title }}</h5>#}
+{#                            </a>#}
+{#                            <hr style="border-color:black"/>#}
+{#                        </div>#}
+{##}
+{#                        <div class="event-date">#}
+{#                            <div class="widget-month">#}
+{##}
+{##}
+{#                                {{ event.start_date }} - {{ event.end_date }}#}
+{##}
+{#                            </div>#}
+{#                        </div>#}
+{#                        <p class="event-description">#}
+{#                        <p>#}
+{##}
+{##}
+{#                            {{ event.description }}#}
+{##}
+{#                        </p>#}
+{#                    </div>#}
+{##}
+{#                </div>#}
+
+    {% empty %}
+    Oops.. No events!
+    {% endfor %}
+
+
+
+</ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <h1> Upcoming Events</h1>
+
+
+
+
+
 <div class="event-list">
     {% for d, event in upcoming_events %}
         {% with colors=event.get_colors %}
