@@ -41,12 +41,26 @@
 .middle-section{
       position: relative;
     margin: 0 auto;
+
+}
+@media (min-width: 576px) {
+  .middle-section{
+
   margin-left:-125px;
     width: 200px;
     float: none !important;
     /* right: 0%; */
     /* float: right; */
     text-align: center;
+}
+}
+@media (max-width: 575px) {
+  .middle-section{
+
+
+    width: auto;
+
+}
 }
 .middle-section {
   .page-filters {
