@@ -38,6 +38,9 @@
   position: relative;
   right:15%;
   }
+  #pull-right-override {
+    float:right;
+  }
 }
 @media (max-width: 400px) {
   .page-filters--right {
@@ -45,6 +48,9 @@
     float:left !important;
   position: relative;
 
+  }
+  #pull-right-override {
+    float:left !important;
   }
 }
 .page-filters {
