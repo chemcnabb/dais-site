@@ -16,10 +16,21 @@ var Utilities = {
 
           var $this = $(this),
               $parent = $this.parent();
-console.log($parent);
+
           $this.remove();
 
           $parent.append('<iframe class="col-md-12 viewport" src="https://player.vimeo.com/video/' + videoId + '?color=ffffff&title=0&byline=0&portrait=0&autoplay=1" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>');
+        });
+    },
+    youtubeClick: function(embed){
+        $('.vimeo-img').click(function (event) {
+
+          var $this = $(this),
+              $parent = $this.parent();
+
+          $this.remove();
+
+          $parent.append(embed);
         });
     }
 };

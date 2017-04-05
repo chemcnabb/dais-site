@@ -13,6 +13,7 @@ class WatchPost(models.Model):
     credits = models.CharField(max_length=500,blank=True, null=True)
     detail = models.CharField(max_length=500,blank=True, null=True)
     vimeo_id = models.CharField(max_length=500, blank=True, null=True)
+    youtube_embed = models.CharField(max_length=500, blank=True, null=True)
     description = HTMLField(blank=True, null=True)
     slug = models.SlugField(blank=True, null=True)
     order = models.IntegerField(default=0)

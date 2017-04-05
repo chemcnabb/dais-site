@@ -8,6 +8,9 @@ var WatchController = {
     },
     initVideo: function(videoId){
         Utilities.videoClick(videoId);
+    },
+    initYoutube: function(embed){
+        Utilities.youtubeClick(embed);
     }
 };
 

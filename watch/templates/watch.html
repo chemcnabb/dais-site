@@ -72,6 +72,10 @@
 
 {% block extra_js %}
     <script>
+        {% if watch.vimeo_id %}
         WatchController.initVideo({{ watch.vimeo_id }});
+        {% elif watch.youtube_embed %}
+            WatchController.initYoutube({{ watch.youtube_embed }});
+        {% endif %}
     </script>
 {% endblock %}
