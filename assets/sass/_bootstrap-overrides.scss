@@ -78,7 +78,9 @@
 .navbar-toggle {
   display: block;
 }
-
+.navbar-collapse{
+  margin-right:-30px;
+}
 .navbar-collapse.collapse {
   display: none !important;
 }
@@ -93,7 +95,6 @@
 
 .navbar-collapse.collapse.in {
   display: block !important;
-  margin-right:-15px;
 }
 
 .navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
