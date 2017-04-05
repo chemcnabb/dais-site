@@ -75,7 +75,7 @@
         {% if watch.vimeo_id %}
         WatchController.initVideo({{ watch.vimeo_id }});
         {% elif watch.youtube_embed %}
-            WatchController.initYoutube({{ watch.youtube_embed }});
+            WatchController.initYoutube('{% autoescape off %}{{ watch.youtube_embed }}{% endautoescape %}');
         {% endif %}
     </script>
 {% endblock %}
