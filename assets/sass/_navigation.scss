@@ -30,12 +30,23 @@
     font-weight: bold;
   }
 }
-.page-filters--right {
+
+@media (min-width: 401px) {
+  .page-filters--right {
 
     float:right !important;
   position: relative;
   right:15%;
   }
+}
+@media (max-width: 400px) {
+  .page-filters--right {
+
+    float:left !important;
+  position: relative;
+
+  }
+}
 .page-filters {
   position:relative;
 
