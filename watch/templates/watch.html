@@ -42,6 +42,7 @@
         <div class="col-sm-12 watch-copy-body" style="">
 
                 {% for more in watch_more %}
+                    {% if more.poster_image %}
                     {% if forloop.first %}
                         <a href="{{ more.get_url }}">
                             <div class="col-sm-3 watch-next-thumb"
@@ -58,6 +59,7 @@
 
                     {% if forloop.last %}
 
+                    {% endif %}
                     {% endif %}
                     {% endif %}
                 {% endfor %}
