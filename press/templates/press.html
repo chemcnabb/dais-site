@@ -11,7 +11,7 @@
     {% for post in post_list %}
 
 
-        {% if post %}
+        {% if post and post.poster_image %}
 
 
             <li class="view-toggle {{ post.category }}">
