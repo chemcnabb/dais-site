@@ -10,57 +10,65 @@ body {
 }
 
 html, body {
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    color: #000000 !important;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  color: #000000 !important;
 }
-.dais-width{
-  max-width:900px;
-  margin:0 auto;
+
+.dais-width {
+  max-width: 900px;
+  margin: 0 auto;
 }
-.page-body-content{
-      top: 90px;
-    position: relative;
-      margin-bottom: 65px;
+
+.page-body-content {
+  top: 90px;
+  position: relative;
+  margin-bottom: 65px;
 
 }
-.post-list-display{
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    margin-left: -15px;
-    margin-right: -15px;
+
+.post-list-display {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  margin-left: -15px;
+  margin-right: -15px;
 }
-.dais-logo-wrapper{
+
+.dais-logo-wrapper {
   position: absolute;
-    text-align: center;
-    width: 100%;
+  text-align: center;
+  width: 100%;
 
 }
-.dais-logo-wrapper > a{
-  position:relative;
-  left:50px;
+
+.dais-logo-wrapper > a {
+  position: relative;
+  left: 50px;
 }
 
-.dais-logo{
-  width:100px;
-  height:72px;
+.dais-logo {
+  width: 100px;
+  height: 72px;
 }
 
 @import 'navigation';
-.header-wrap{
-      width: 100%;
-top:19px;
-    position: relative;
-    min-height: 155px;
+.header-wrap {
+  width: 100%;
+  top: 19px;
+  position: relative;
+  min-height: 155px;
 }
-.no-header{
-  display:none;
+
+.no-header {
+  display: none;
 }
-.show-header{
-  display:block;
+
+.show-header {
+  display: block;
 }
+
 @mixin viewport() {
   height: 93vh;
   background-repeat: no-repeat;
@@ -75,18 +83,20 @@ top:19px;
   //transition: all 0.3s ease-in-out;
   box-shadow: inset 0 0 0 1000px rgba(255, 255, 255, .5);
 }
- a {
-    color:#000;
-  }
 
- .subtitle {
+a {
+  color: #000;
+}
 
-      margin-top: 7px;
-      text-transform: capitalize;
-      transition: all 0.5s ease-in-out;
-      min-height:18px;
-   max-width:63%;
-    }
+.subtitle {
+
+  margin-top: 7px;
+  text-transform: capitalize;
+  transition: all 0.5s ease-in-out;
+  min-height: 18px;
+
+}
+
 .content {
   //transition: all 0.3s ease-in-out;
 
@@ -99,11 +109,11 @@ top:19px;
     bottom: -25px;
     min-width: 98%;
     .title {
-      font-size: 24px;
+
       font-weight: bold;
       text-transform: uppercase;
       transition: all 0.5s ease-in-out;
-      max-width:63%;
+
     }
 
     .title-line {
@@ -117,11 +127,75 @@ top:19px;
   }
 }
 
-.title-line {
-      border-color: #000;
-      margin-bottom: 9px;
-      margin-top: 13px;
+@media (max-width: 575px) {
+  .watch-logo-container {
+    width: 120px;
+    height: 120px;
+    img, svg {
+      width: 40px;
     }
+  }
+  .home-category {
+    top: -106px;
+
+  }
+  .subtitle {
+
+    font-size: 12px;
+    max-width: 54%;
+  }
+  .content {
+    //transition: all 0.3s ease-in-out;
+
+    .copy-headings {
+
+      .title {
+        font-size: 20px;
+
+        max-width: 59%;
+      }
+
+    }
+  }
+}
+
+@media (min-width: 576px) {
+  .watch-logo-container {
+    width: 135px;
+    height: 135px;
+    img, svg {
+      width: 50px;
+    }
+  }
+  .home-category {
+    top: -121px;
+
+  }
+  .subtitle {
+
+    max-width: 63%;
+  }
+  .content {
+    //transition: all 0.3s ease-in-out;
+
+    .copy-headings {
+
+      .title {
+        font-size: 24px;
+
+        max-width: 63%;
+      }
+
+    }
+  }
+}
+
+.title-line {
+  border-color: #000;
+  margin-bottom: 9px;
+  margin-top: 13px;
+}
+
 .copy-drawer {
   position: relative;
   width: 110%;
@@ -135,41 +209,46 @@ top:19px;
   bottom: -1%;
   z-index: 10;
   opacity: 1;
-  margin-left:-15px;
-  margin-right:-15px;
+  margin-left: -15px;
+  margin-right: -15px;
 }
 
-
-.play-btn{
+.play-btn {
   background-image: url("/static/imgs/icons/video-play-icon.png");
-  width:114px;
-  height:114px;
+  width: 114px;
+  height: 114px;
   margin: auto;
   position: absolute;
-  top: 0; left: 0; bottom: 0; right: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
 }
+
 .home .viewport:hover > .copy-drawer, .home .viewport:focus > .copy-drawer,
 .home .viewport-half:hover > .copy-drawer, .home .viewport-half:focus > .copy-drawer {
   bottom: 285px;
   opacity: .4;
 }
-ul.post-list-display li .viewport.full{
+
+ul.post-list-display li .viewport.full {
   width: 100vw !important;
   max-width: 100%;
 }
 
 @media (max-width: 767px) {
   ul.post-list-display li .viewport.half {
-  width: 100vw !important;
-  max-width: 100%;
+    width: 100vw !important;
+    max-width: 100%;
+  }
 }
-}
+
 @media (min-width: 768px) {
   ul.post-list-display li .viewport.half {
-  width: 50vw;
-  float:left;
-  max-width: 50%;
-}
+    width: 50vw;
+    float: left;
+    max-width: 50%;
+  }
 }
 
 .viewport {
@@ -187,16 +266,17 @@ ul.post-list-display li .viewport.full{
   color: #fff;
   box-shadow: inset 0 0 0 1000px rgba(255, 255, 255, 0);
 }
-.watch-logo-container, .watch-date-line{
+
+.watch-logo-container, .watch-date-line {
   transition: all 0.4s ease-in-out;
 }
+
 .home .content:hover > .copy-headings > .watch-link, .home .content:focus > .copy-headings > .watch-link,
 .home .content:hover > .copy-headings > .title-line, .home .content:focus > .copy-headings > .title-line,
 .home .content:hover > .copy-headings > .watch-title-logo > .watch-logo-container,
 .home .content:focus > .copy-headings > .watch-title-logo > .watch-logo-container,
 .home .content:hover > .copy-headings > .watch-title-logo > .watch-logo-container > .watch-date-line,
-.home .content:focus > .copy-headings > .watch-title-logo > .watch-logo-container > .watch-date-line
-{
+.home .content:focus > .copy-headings > .watch-title-logo > .watch-logo-container > .watch-date-line {
   border-color: #fff;
   color: #fff;
 
@@ -217,82 +297,85 @@ ul.post-list-display li .viewport.full{
 
 }
 
-.footer-wrapper{
-      margin-right: -15px;
-    margin-left: -15px;
-    background-color: #efefef;
-    overflow: hidden;
-    min-width: 100%;
+.footer-wrapper {
+  margin-right: -15px;
+  margin-left: -15px;
+  background-color: #efefef;
+  overflow: hidden;
+  min-width: 100%;
 }
 
-footer{
-background-color: #efefef;
-    display: table;
-    height: 0;
-    width: 102%;
-    margin-left: -15px;
-    /* margin-right: -25px; */
-    bottom: 0;
-  .row{
-    margin-right:0 !important;
+footer {
+  background-color: #efefef;
+  display: table;
+  height: 0;
+  width: 102%;
+  margin-left: -15px;
+  /* margin-right: -25px; */
+  bottom: 0;
+  .row {
+    margin-right: 0 !important;
   }
- .dais-logo-sm{
-          float: right;
+  .dais-logo-sm {
+    float: right;
     position: absolute;
     top: 15px;
     right: 0;
-    }
+  }
 
+  #search-input {
+    padding: 25px;
+    margin-left: 15px;
+    margin-top: 25px;
 
-  #search-input{
-    padding:25px;
-    margin-left:15px;
-    margin-top:25px;
-
-    .input-group{
-      .form-control{
+    .input-group {
+      .form-control {
         -webkit-box-shadow: none;
         box-shadow: none;
-        border-top:none;
-        border-left:none;
-        border-right:none;
-        border-radius:0;
-        border-bottom:1px solid #000;
-        background-color:transparent;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-radius: 0;
+        border-bottom: 1px solid #000;
+        background-color: transparent;
       }
 
-      .btn{
-        background-color:transparent;
-        border-top:none;
-        border-left:none;
-        border-right:none;
-        border-radius:0;
-        border-bottom:1px solid #000;
-        color:#000;
-            padding-bottom: 12px;
+      .btn {
+        background-color: transparent;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-radius: 0;
+        border-bottom: 1px solid #000;
+        color: #000;
+        padding-bottom: 12px;
       }
     }
   }
 }
-.footer-share{
-  padding:25px;
-    margin-left:15px;
-}
-.right-footer-nav{
-  text-align:right;
+
+.footer-share {
+  padding: 25px;
+  margin-left: 15px;
 }
 
-.home-category{
-  top: -121px;
+.right-footer-nav {
+  text-align: right;
+}
+
+.home-category {
+
   position: relative;
 }
-.look-category{
-    bottom: 84px;
-    right: -5px;
-    position: relative;
+
+.look-category {
+  bottom: 84px;
+  right: -5px;
+  position: relative;
 }
-.look-headings{
-  bottom:-95px !important;
+
+.look-headings {
+  bottom: -95px !important;
 }
 
 @media (max-width: 992px) {
