@@ -10,5 +10,5 @@ class ListenView(TemplateView):
         slug = kwargs['listen_slug']
         context = super(ListenView, self).get_context_data(**kwargs)
         context["listen"] = get_object_or_404(ListenPost,slug=slug)
-
+        context["listen_more"] = ListenPost.objects.exclude(pk=context["listen"].pk).order_by('order').order_by('-date')[:3]
         return context
