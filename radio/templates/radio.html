@@ -12,8 +12,8 @@
 
             <div class="content" style="top:-120px">
                 <div class="copy-headings look-headings">
-                    <div class="title">STOREFRONT GALLERY</div>
-                    <div class="subtitle">A storefront gallery with a window facing Queen Street West. This intimate and adaptable space includes 600 feet of wall space, a moveable stage for performances, talks, and workshops.Bookings and Rates, Gallery Curator: Giles@dais.ca</div>
+                    <div class="title">{{ page.title }}</div>
+                    <div class="subtitle">{% autoescape off %}{{ page.description }}{% endautoescape %}</div>
 {#                    <span class="watch-date">{{ look.date|date:"d.m.Y" }}</span>#}
 
                 </div>
