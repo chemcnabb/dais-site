@@ -1,13 +1,7 @@
 /**
  * Created by STO-SD003 on 2017-01-23.
  */
-function sendDaisMail(){
-    let subject = escape("Contact Us");
-    let name = escape(jQuery("#name").val());
-    let email = jQuery("#email").val();
-    let body = escape(jQuery("#comment").val());
-    window.open('mailto:info@dais.ca?subject='+subject+'&body=NAME:' + name + '\nEmail:'+email+'\n' + body);
-}
+
 const HomeController = {
     init: function () {
         let collection = ["watch", "look", "listen"];
