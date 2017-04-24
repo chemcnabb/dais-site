@@ -36,7 +36,7 @@
             <div class="panel panel-default">
                 <div class="panel-body">
                     <div class="form-wrapper">
-                        <form class="form-horizontal" id="daisContact" method="post" action="javascript:;" onsubmit="javascript:sendDaisMail()">
+                        <form class="form-horizontal" id="daisContact" method="post" action="javascript:;">
 
                             <div class="form-group">
                                 <label for="name" class="cols-sm-2 control-label">Name</label>
@@ -66,7 +66,7 @@
                             </div>
 
 
-                            <a type="button" onclick="javascript:document.getElementById('daisContact').submit()" class="btn btn-lg btn-block submit-button">submit</a>
+                            <a type="button" onclick="javascript:sendDaisMail()" class="btn btn-lg btn-block submit-button">submit</a>
 
 
                         </form>
@@ -83,12 +83,12 @@
 {% block extra_js %}
 <script>
 function sendDaisMail(){
-    console.log("sending mail...");
+{#    console.log("sending mail...");#}
     let subject = escape("Contact Us");
     let name = escape(jQuery("#name").val());
     let email = jQuery("#email").val();
     let body = escape(jQuery("#comment").val());
-    window.open('mailto:info@dais.ca?subject='+subject+'&body=NAME:' + name + '\nEmail:'+email+'\n' + body);
+    window.open('mailto:info@dais.ca?subject='+subject+'&body=NAME:' + name + '%0AEmail:'+email+'%0A%0A' + body);
     return true;
 }
 </script>
