@@ -83,11 +83,13 @@
 {% block extra_js %}
 <script>
 function sendDaisMail(){
+    console.log("sending mail...");
     let subject = escape("Contact Us");
     let name = escape(jQuery("#name").val());
     let email = jQuery("#email").val();
     let body = escape(jQuery("#comment").val());
     window.open('mailto:info@dais.ca?subject='+subject+'&body=NAME:' + name + '\nEmail:'+email+'\n' + body);
+    return true;
 }
 </script>
 {% endblock %}
