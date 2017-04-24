@@ -22,7 +22,7 @@ from watch.views import WatchView
 from look.views import LookView
 from listen.views import ListenView
 from django.conf.urls.static import static
-from radio.views import RadioView
+from radio.views import RadioView, SoundView
 from music.views import MusicView, ArtistView
 from press.views import PressView
 from about.views import AboutView
@@ -38,6 +38,7 @@ url(r'^tinymce/', include('tinymce.urls')),
     url(r'^listen/(?P<listen_slug>[\w-]+)/$', ListenView.as_view(), name="listen"),
     url(r'^artist/(?P<music_slug>[\w-]+)/$', ArtistView.as_view(), name="artist"),
     url(r'^radio/$', RadioView.as_view(), name="radio"),
+url(r'^radio/(?P<sound_slug>[\w-]+)/$', SoundView.as_view(), name="sound"),
     url(r'^music/$', MusicView.as_view(), name="music"),
     url(r'^press/$', PressView.as_view(), name="press"),
     url(r'^events/', include('happenings.urls', namespace='calendar'), name="events"),

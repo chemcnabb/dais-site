@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block page-class %}artist{% endblock %}
+{% block content %}
+
+
+
+    <div class="row  row-full-override">
+        <div class="col-md-12 viewport" style="background-image: url({{ artist.poster_image.url }});">
+
+        </div>
+
+    </div>
+
+
+    <div class="row watch-title">
+        <div class="col-md-10 watch-title-content" style="">
+
+            <h1>{{ artist.title }}</h1>
+            <p class="subtitle">{{ artist.subtitle }}</p>
+            <p class="subtitle">{{ artist.credits }}</p>
+
+
+
+        </div>
+        <div class="col-md-2 pull-right watch-title-logo">
+            <div class="watch-logo-container pull-right">
+                <span class="watch-date">{{ artist.date|date:"d.m.Y" }}</span>
+                <hr class="watch-date-line"/>
+                <img src="/static/imgs/icons/listen-icon.svg"/>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row watch-copy">
+        <div class="col-sm-12 watch-copy-body" style="">
+            {% autoescape off %}{{ artist.description }}{% endautoescape %}
+        </div>
+    </div>
+    <br>
+    {%  for sound in artist.radiosound_set.all %}
+<div class="row watch-copy">
+        <div class="col-sm-12 watch-copy-body" style="">
+            {% autoescape off %}{{ sound.soundcloud_embed }}{% endautoescape %}
+        </div>
+    </div>
+{% endfor %}
+
+{% endblock content %}
+
+
+
