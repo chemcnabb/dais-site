@@ -185,6 +185,7 @@ MEDIAFILES_LOCATION = 'uploads'
 MEDIA_URL = "https://%s/%s/" % (AWS_S3_CUSTOM_DOMAIN, MEDIAFILES_LOCATION)
 DEFAULT_FILE_STORAGE = 'dais.custom_storages.MediaStorage'
 
+TINYMCE_JS_URL = '/static/tiny_mce/tiny_mce_src.js'
 
 try:
     from .local_setting_override import *
